@@ -1,5 +1,5 @@
 body {
-    background: rgb(34, 34, 34);
+    background: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1200px;
@@ -19,13 +19,14 @@ header {
     line-height: 10px;
 }
 
-li{
-    display: inline-block;
-    margin: 20px;
+ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
-
-nav a {
-    color: white;
+nav ul li {
+    padding-left: 16px;
+    list-style-type: none;
 }
 
 nav a:hover {
