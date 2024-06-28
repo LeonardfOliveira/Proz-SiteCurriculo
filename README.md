@@ -1,4 +1,4 @@
-**Portfólio Pro: Crie e Exiba seu Portfólio Online**
+**ProzConnect: Crie e Exiba seu Portfólio Online**
 
 **Descrição do Projeto:**
 
