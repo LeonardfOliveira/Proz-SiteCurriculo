@@ -1,0 +1,201 @@
+
+/* Estilo de página */
+* body {
+    background: black;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .figure img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        font-family: 'Courier New', Courier, monospace;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: right;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(17, 153, 231);;;
+    }
+    
+    nav a:hover {
+        color: rgb(17, 153, 231);
+        transition: 0.3s all;
+    }
+    
+    #inscreva-se-btn {
+        border: 2px solid rgb(17, 153, 231);;
+        padding: 10px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+    
+    #inscreva-se-btn:hover {
+        background-color: rgb(17, 153, 231);;
+        color: white;
+    }
+
+h1 {
+
+    font-weight: 200;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+h2 {
+    display: flex;
+    font-size: 56px;
+    line-height: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span {
+    color: rgb(17, 153, 231);
+}
+
+p {
+    line-height: 1.5;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/*Inscreve-se agora*/
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#cadastre-se-btn {
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid rgb(17, 153, 231);
+    color: rgb(17, 153, 231);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+#cadastre-se-btn:hover {
+    background-color: rgb(17, 153, 231);
+        color: white;
+    }
+
+/*Article*/
+article img {
+    max-width: 100%;
+    height: auto;
+    align-self: flex-end;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #070707;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    margin-top: auto;
+}
+
+.form-control {
+    margin-top: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin: 5px;
+    width: 800px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    font-size: 1rem; 
+}
+
+.textarea {
+
+    margin-top:block;
+    height: 125px;
+    border-radius: 20px;
+    margin: 5px;
+    width: 800px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    font-size: 1rem; 
+}
+
+/*estilo contatos*/
+.subtitulo {
+    display: flex;
+    color: white;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: auto; 
+} 
+
+/*redes sociais*/
+.socialnetworks {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.contactclasse {
+    color: white;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contactinfo {
+    color: white;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*direitos*/
+footer {
+    color: white;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+

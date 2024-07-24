@@ -1,0 +1,164 @@
+
+/* Estilo de página */
+* body {
+    background: black;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .figure img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        font-family: 'Courier New', Courier, monospace;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: right;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(17, 153, 231);;;
+    }
+    
+    nav a:hover {
+        color: rgb(17, 153, 231);
+        transition: 0.3s all;
+    }
+    
+    #inscreva-se-btn {
+        border: 2px solid rgb(17, 153, 231);;
+        padding: 10px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+    
+    #inscreva-se-btn:hover {
+        background-color: rgb(17, 153, 231);;
+        color: white;
+    }
+
+/* Estilização do login */
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+    color: rgb(251, 251, 252);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="submit"] {
+    height: 50px;
+    width: 50%;
+    background-color: rgb(17, 153, 231);
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input {
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+/*Article*/
+article img {
+    max-width: 150%;
+    height: 120%;
+    align-self: flex-end;
+}
+
+/*subtítulo*/
+.subtitulo {
+    display: flex;
+    margin: 0.5;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5px; 
+} 
+
+/*redes sociais*/
+.socialnetworks {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.contactclasse {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contactinfo {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*direitos*/
+footer {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
