@@ -43,7 +43,10 @@
     }
     
     #inscreva-se-btn {
-        border: 2px solid rgb(17, 153, 231);;
+        background-color: rgb(17, 153, 231);
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid rgb(246, 247, 248);
+        color: rgb(246, 247, 248);
         padding: 10px;
         border-radius: 15px;
         text-decoration: none;
@@ -55,27 +58,35 @@
     }
 
 /* Estilização do login */
+
 main {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 30px;
+    max-width: 1200px;
     justify-content: space-between;
 }
 
 h2 {
-    font-size: 56px;
-    line-height: 10px;
+    font-size: 30px;
+    line-height: 0.1px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 span {
-    color: rgb(251, 251, 252);
+    color: rgb(17, 153, 231);
 }
 
-form {
+.login-password {
     display: flex;
+    width: 120%;
     flex-direction: column;
-    width: 200%;
+    
+}
+
+.login-pass {
+    border: 2px solid rgb(17, 153, 231);
+    width: 100%;
 }
 
 .input-group {
@@ -85,21 +96,20 @@ form {
 
 .input-box {
     display: flex;
+    font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
+    justify-content: right; 
+    justify-items: right;
+    width: 110%;
 }
 
-form input[type="submit"] {
-    height: 50px;
-    width: 50%;
-    background-color: rgb(17, 153, 231);
-    color: white;
-    font-weight: bold;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+label {
+    margin-bottom: 0.5rem;
+    color: rgb(17, 153, 231);
 }
 
 input {
+    border: 2px solid rgb(17, 153, 231);
     margin-top: 20px;
     height: 20px;
     padding: 15px;
@@ -108,12 +118,32 @@ input {
     font-size: 15px;
 }
 
+.open {
+    width: 110%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#open-btn{
+    background-color: rgb(17, 153, 231);
+    border: 2px solid rgb(245, 247, 248);
+    color: rgb(240, 245, 248);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;   
+}
+
+#open-btn:hover{
+    background-color: rgb(17, 153, 231);
+        color: white;
+    }
+
 /*Article*/
 article img {
-    max-width: 150%;
-    height: 120%;
-    align-self: flex-end;
-}
+        max-width: 100%;
+        height: auto;
+        align-self: flex-end;
+    }
 
 /*subtítulo*/
 .subtitulo {
@@ -126,39 +156,33 @@ article img {
 
 /*redes sociais*/
 .socialnetworks {
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: right;
     flex-wrap: wrap;
     max-width: 250px;
-    margin: 0 auto;
-    padding: 0 20px; 
+    margin: auto;
+    padding: auto; 
 }
 
 .contactclasse {
+    color: white;
     display: flex;
-    margin: auto;
-    flex-wrap: wrap;
+    margin: 5px;
     justify-content: center;
 }
 
 .contactinfo {
+    color: white;
     display: flex;
-    margin: auto;
-    flex-wrap: wrap;
+    margin: 5px;
     justify-content: center;
 }
 
 /*direitos*/
 footer {
+    color: white;
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
 }
-
-
-
-
-
-

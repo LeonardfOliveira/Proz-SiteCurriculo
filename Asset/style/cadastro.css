@@ -1,5 +1,5 @@
-/* Estilos página */
-*  body {
+/* Estilo de página */
+* body {
     background: black;
     max-width: 1200px;
     margin: 0 auto;
@@ -12,6 +12,7 @@
     --background-color: #f0f0f0;
     --accent-color: #2196F3;
 }
+
 
 header {
     display: flex;
@@ -48,7 +49,10 @@ nav a:hover {
 }
 
 #inscreva-se-btn {
-    border: 2px solid rgb(17, 153, 231);;
+    background-color: rgb(17, 153, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(246, 247, 248);
+    color: rgb(246, 247, 248);
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
@@ -63,9 +67,7 @@ nav a:hover {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fdfbfb;
     padding: 30px;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -81,6 +83,7 @@ nav a:hover {
 }
 
 .input-box label {
+    color: #f0f0f0;
     display: block;
     margin-bottom: 5px;
 }
@@ -99,11 +102,13 @@ nav a:hover {
 
 .input-box label {
     display: block;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 5px;
 }
 
 .input-box input {
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -111,7 +116,7 @@ nav a:hover {
 
 .gender-group {
     display: flex;
-    color: black;
+    color: #f0f0f0;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -119,20 +124,22 @@ nav a:hover {
 .form-group button {
     width: calc(33.33% - 10px); /* Ajuste para três botões lado a lado */
     padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid rgb(246, 247, 248);
+    border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 button[type="save"] {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(17, 153, 231);
     padding: 10px;
     color: #fff;
 }
 
 button[type="change"] {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(17, 153, 231);
     padding: 10px;
     color: #fff;
@@ -140,6 +147,7 @@ button[type="change"] {
 }
 
 button[type="following"] {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(17, 153, 231);
     padding: 10px;
     color: #fff;

@@ -1,8 +1,8 @@
-/*body*/
-body {
+
+/* Estilo de página */
+* body {
     background: black;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
@@ -10,7 +10,9 @@ body {
 
     header {
         display: flex;
-        justify-content: space-between; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .figure img {
@@ -19,10 +21,11 @@ body {
     }
     
     nav ul {
+        font-family: 'Courier New', Courier, monospace;
         list-style-type: none;
         padding: 0;
         display: flex;
-        justify-content: flex-end;
+        justify-content: right;
     }
     
     nav ul li {
@@ -31,7 +34,7 @@ body {
     
     nav ul li a {
         text-decoration: none;
-        color: rgb(17, 153, 231);
+        color: rgb(17, 153, 231);;;
     }
     
     nav a:hover {
@@ -40,14 +43,17 @@ body {
     }
     
     #inscreva-se-btn {
-        border: 2px solid rgb(17, 153, 231);
+        background-color: rgb(17, 153, 231);
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid rgb(246, 247, 248);
+        color: rgb(246, 247, 248);
         padding: 10px;
         border-radius: 15px;
         text-decoration: none;
     }
     
     #inscreva-se-btn:hover {
-        background-color: rgb(17, 153, 231);
+        background-color: rgb(17, 153, 231);;
         color: white;
     }
 
@@ -61,10 +67,7 @@ body {
         color: rgb(17, 153, 231);
         line-height: 10px;
         font-weight: 200;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-
-    
 
     strong {
     color: rgb(17, 153, 231);
@@ -78,49 +81,45 @@ p {
     font-family: Arial, Helvetica, sans-serif
 }
 
-.image  {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 30px;
-    padding: 0 20px;
-}
-
 /*estilo contatos*/
 .subtitulo {
     display: flex;
+    margin: 5px;
     color: white;
-    margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: auto; 
+  
 } 
+
+.image {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 50px;
+}
 
 /*redes sociais*/
 .socialnetworks {
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items: right;
     flex-wrap: wrap;
     max-width: 250px;
-    margin: 0 auto;
-    padding: 0 20px; 
+    margin: auto;
+    padding: auto; 
 }
 
 .contactclasse {
     color: white;
     display: flex;
-    margin: auto;
-    flex-wrap: wrap;
+    margin: 5px;
+    
     justify-content: center;
 }
 
 .contactinfo {
     color: white;
     display: flex;
-    margin: auto;
-    flex-wrap: wrap;
+    margin: 5px;
     justify-content: center;
 }
 
@@ -129,7 +128,6 @@ footer {
     color: white;
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
 }
 

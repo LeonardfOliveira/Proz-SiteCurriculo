@@ -1,63 +1,67 @@
-/* Estilos página */
-*  body {
+/* Estilo de página */
+* body {
     background: black;
+    color: white;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
     }
 
 :root {
-    --primary-color: #333;
-    --secondary-color: #555;
-    --background-color: #f0f0f0;
+    --primary-color:  black;
+    --secondary-color: black;
+    --background-color:  black;
     --accent-color: #2196F3;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.figure img {
-    display: block;
-    margin: 0 auto;
-}
-
-nav ul {
-    font-family: 'Courier New', Courier, monospace;
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: right;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(17, 153, 231);;;
-}
-
-nav a:hover {
-    color: rgb(17, 153, 231);
-    transition: 0.3s all;
-}
-
-#inscreva-se-btn {
-    border: 2px solid rgb(17, 153, 231);;
-    padding: 10px;
-    border-radius: 15px;
-    text-decoration: none;
-}
-
-#inscreva-se-btn:hover {
-    background-color: rgb(17, 153, 231);;
-    color: white;
-}
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .figure img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        font-family: 'Courier New', Courier, monospace;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: right;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(17, 153, 231);;;
+    }
+    
+    nav a:hover {
+        color: rgb(17, 153, 231);
+        transition: 0.3s all;
+    }
+    
+    #inscreva-se-btn {
+        background-color: rgb(17, 153, 231);
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid rgb(246, 247, 248);
+        color: rgb(246, 247, 248);
+        padding: 10px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+    
+    #inscreva-se-btn:hover {
+        background-color: rgb(17, 153, 231);;
+        color: white;
+    }
 
 .container {
     font-family: Arial, Helvetica, sans-serif;
@@ -65,18 +69,19 @@ nav a:hover {
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
-    background: #fff;
+    background: Bla
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 h2 {
     text-align: center;
+    color: rgb(17, 153, 231);;
     margin-bottom: 2rem;
 }
 
 fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid white;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 5px;
@@ -117,6 +122,7 @@ textarea {
 
 .checkbox-group,
 .radio-group {
+    border: white;
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
@@ -143,10 +149,12 @@ textarea {
 }
 
 .form-group button {
+    border: 2px solid rgb(246, 247, 248);
+    background-color: rgb(17, 153, 231);
+    color: #fff;
     width: calc(33.33% - 10px); /* Ajuste para três botões lado a lado */
     padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
@@ -192,14 +200,13 @@ button:hover {
     }
 }
 
-/*subtítulo*/
+/*estilo contatos*/
 .subtitulo {
-    color: white;
     display: flex;
-    margin: 0.5;
-    flex-wrap: wrap;
+    margin: 5px;
+    color: white;
     justify-content: center;
-    padding: 0.5px; 
+  
 } 
 
 /*redes sociais*/
@@ -207,18 +214,16 @@ button:hover {
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items: right;
     flex-wrap: wrap;
     max-width: 250px;
-    margin: 0 auto;
-    padding: 0 20px; 
+    margin: auto;
+    padding: auto; 
 }
 
 .contactclasse {
     color: white;
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -226,7 +231,6 @@ button:hover {
     color: white;
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -235,7 +239,6 @@ footer {
     color: white;
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
