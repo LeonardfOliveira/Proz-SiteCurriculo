@@ -1,7 +1,7 @@
 /* Estilo de página */
 * body {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
@@ -14,54 +14,54 @@
     --accent-color: #2196F3;
 }
 
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .figure img {
-        display: block;
-        margin: 0 auto;
-    }
-    
-    nav ul {
-        font-family: 'Courier New', Courier, monospace;
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: right;
-    }
-    
-    nav ul li {
-        margin: 0 10px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: rgb(17, 153, 231);;;
-    }
-    
-    nav a:hover {
-        color: rgb(17, 153, 231);
-        transition: 0.3s all;
-    }
-    
-    #inscreva-se-btn {
-        background-color: rgb(17, 153, 231);
-        font-family: Arial, Helvetica, sans-serif;
-        border: 2px solid rgb(246, 247, 248);
-        color: rgb(246, 247, 248);
-        padding: 10px;
-        border-radius: 15px;
-        text-decoration: none;
-    }
-    
-    #inscreva-se-btn:hover {
-        background-color: rgb(17, 153, 231);;
-        color: white;
-    }
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(17, 153, 231);;;
+}
+
+nav a:hover {
+    color: rgb(17, 153, 231);
+    transition: 0.3s all;
+}
+
+#inscreva-se-btn {
+    background-color: rgb(17, 153, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1.5px solid rgb(5, 5, 5);
+    color: rgb(246, 247, 248);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+#inscreva-se-btn:hover {
+    background-color: rgb(17, 153, 231);;
+    color: white;
+}
 
 .container {
     font-family: Arial, Helvetica, sans-serif;
@@ -69,8 +69,6 @@
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
-    background: Bla
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -149,10 +147,10 @@ textarea {
 }
 
 .form-group button {
-    border: 2px solid rgb(246, 247, 248);
+    border: 2px solid black;
     background-color: rgb(17, 153, 231);
     color: #fff;
-    width: calc(33.33% - 10px); /* Ajuste para três botões lado a lado */
+    width: calc(33.33% - 5px);
     padding: 0.75rem;
     border-radius: 20px;
     font-size: 1rem;
@@ -204,14 +202,14 @@ button:hover {
 .subtitulo {
     display: flex;
     margin: 5px;
-    color: white;
+    color: black;
     justify-content: center;
   
 } 
 
 /*redes sociais*/
 .socialnetworks {
-    color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -221,14 +219,14 @@ button:hover {
 }
 
 .contactclasse {
-    color: white;
+    color: black;
     display: flex;
     margin: auto;
     justify-content: center;
 }
 
 .contactinfo {
-    color: white;
+    color: black;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -236,7 +234,7 @@ button:hover {
 
 /*direitos*/
 footer {
-    color: white;
+    color: black;
     display: flex;
     margin: auto;
     justify-content: center;
