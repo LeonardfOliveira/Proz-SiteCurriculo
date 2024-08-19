@@ -1,18 +1,19 @@
 /* Estilo de página */
-* body {
-    background: black;
-    max-width: 1200px;
+:root {
+    --primary-color: black;
+    --secondary-color: black;
+    --background-color: white;
+    --accent-color: rgb(17, 153, 231);
+    --text-color: black;
+}
+    
+body {
+    background: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
     padding: 15px;
-    }
-
-:root {
-    --primary-color: #333;
-    --secondary-color: #555;
-    --background-color: #f0f0f0;
-    --accent-color: #2196F3;
+    width:  1200px;
 }
-
 
 header {
     display: flex;
@@ -24,204 +25,214 @@ header {
 .figure img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 nav ul {
-    font-family: 'Courier New', Courier, monospace;
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: right;
-}
-
-nav ul li {
-    margin: 0 10px;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(17, 153, 231);;;
+    color: var(--accent-color);
 }
 
 nav a:hover {
-    color: rgb(17, 153, 231);
-    transition: 0.3s all;
+    color: var(--primary-color);
+    transition: color 0.3s;
 }
 
-#inscreva-se-btn {
-    background-color: rgb(17, 153, 231);
-    font-family: Arial, Helvetica, sans-serif;
-    border: 2px solid rgb(246, 247, 248);
-    color: rgb(246, 247, 248);
+/* Estilo do botão de login */
+#login-btn {
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-color);
+    color: var(--background-color);
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
+    text-align: center;
+    font-family: inherit;
 }
 
-#inscreva-se-btn:hover {
-    background-color: rgb(17, 153, 231);;
-    color: white;
+#login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
-/* Estilo cadastro */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.input-group {
+/* Formulário de Cadastro */
+main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 90px;
+    height: 720px;
+    border-radius: 10px;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 2rem; 
 }
 
-.input-box {
-    flex-basis: 48%;
-    margin-bottom: 20px;
+/* Imagem */
+.image img {
+    border-radius: 10px;
+    width: 750px; 
 }
 
-.input-box label {
-    color: #f0f0f0;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-box input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.input-box {
-    flex-basis: 48%;
-    margin-bottom: 20px;
-}
-
-.input-box label {
-    display: block;
+/* Inscreva-se */
+#inscreva-btn {
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-color);
+    color: var(--background-color);
+    padding: 0.8rem 1.2rem;
+    margin: 1rem 0;
+    border-radius: 40px;
+    text-decoration: none;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 5px;
 }
 
-.input-box input {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.gender-group {
-    display: flex;
-    color: #f0f0f0;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.form-group button {
-    width: calc(33.33% - 10px); /* Ajuste para três botões lado a lado */
-    padding: 0.75rem;
-    border: 2px solid rgb(246, 247, 248);
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button[type="save"] {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(17, 153, 231);
-    padding: 10px;
-    color: #fff;
-}
-
-button[type="change"] {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(17, 153, 231);
-    padding: 10px;
-    color: #fff;
-    margin-top: 0.5rem;
-}
-
-button[type="following"] {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(17, 153, 231);
-    padding: 10px;
-    color: #fff;
-    margin-top: 0.5rem;
-}
-
-button:hover {
+#inscreva-btn:hover {
     opacity: 0.9;
 }
 
-.required {
+/* Login */
+#open-btn{
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-color);
+    color: var(--background-color);
+    padding: 0.8rem 1.2rem;
+    margin: 1rem 0;
+    border-radius: 40px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#open-btn:hover {
+    opacity: 0.9;
+}
+
+/* Formulário */
+.register {
+   font-family: Arial, Helvetica, sans-serif;
+   width: 742px; 
+   padding: 30px 120px;
+   height: 720px;
+   background-color: white;
+   border-radius: 0px 10px 10px 0px;
+}
+
+.Title {
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(17, 153, 231);
+    margin-bottom: 25px;
 }
 
-@media (max-width: 600px) {
-    .date-group select {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
-    .form-group button {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
+.input-subgroup1 {
+    
+    margin-top: 10px;
+    display: flex;
+    gap: 120px;
 }
 
-/*estilo contatos*/
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    width: 100%;
+    margin: 0.8rm 0;
+    padding: 0.8rem 3.2rem;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 1px 1px 6px #00000041;
+    font-size: 0.8rem;
+}
+
+.box {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1.5rem;
+    font-size: 15px;
+    gap: 10px;
+    margin-bottom: 1.1rem;
+}
+
+/* Botão */
+button {
+    border: 2px solid var(--primary-color);
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.75rem;
+    width: auto; 
+    min-width: 100px; 
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+#button:hover {
+    opacity: 0.9;
+}
+
+/* cadastro de login */
+.log-sociais {
+    text-align: center;
+}
+
+.log-sociais img {
+    margin: 0;
+    width: 60px;
+    height: 50px;
+    margin: 5px 0 5px 5px;
+    cursor:pointer;
+}
+
+/* Estilos de Contato */
 .subtitulo {
     display: flex;
-    color: white;
-    margin: auto;
-    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
-    padding: auto; 
-} 
+    text-align: center;
+    margin: 30px;
+    color: var(--text-color);
+}
 
-/*redes sociais*/
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px auto;
+    color: var(--text-color);
+}
+
+/* Redes sociais */
 .socialnetworks {
-    color: white;
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 250px;
-    margin: 0 auto;
-    padding: 0 20px; 
-}
-
-.contactclasse {
-    color: white;
-    display: flex;
     margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
 }
-
-.contactinfo {
-    color: white;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/*direitos*/
-footer {
-    color: white;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-
-
-
-
-

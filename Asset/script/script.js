@@ -1,22 +1,17 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Preenche os anos de 2000 até o ano atual no select de ano de início
-    let selectAnoInicio = document.getElementById('anoInicio');
-    let anoAtual = new Date().getFullYear();
-    for (let ano = anoAtual; ano >= 2000; ano--) {
-        let option = document.createElement('option');
-        option.value = ano;
-        option.textContent = ano;
-        selectAnoInicio.appendChild(option);
+    function preencherAnos(id) {
+        const select = document.getElementById(id);
+        const anoAtual = new Date().getFullYear();
+        for (let i = anoAtual; i >= 1900; i--) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            select.appendChild(option);
+        }
     }
 
-    // Preenche os anos de 2000 até o ano atual no select de ano de fim
-    let selectAnoFim = document.getElementById('anoFim');
-    for (let ano = anoAtual; ano >= 2000; ano--) {
-        let option = document.createElement('option');
-        option.value = ano;
-        option.textContent = ano;
-        selectAnoFim.appendChild(option);
-    }
+    // Preenche os campos de ano para admissão e demissão
+    preencherAnos('anoInicio');
+    preencherAnos('anoFim');
 });
+

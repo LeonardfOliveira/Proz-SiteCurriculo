@@ -52,3 +52,55 @@ header {
     color: white;
 }
 
+/*estilo contatos*/
+.subtitulo {
+    display: flex;
+    color: black;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: auto; 
+} 
+
+/*redes sociais*/
+.socialnetworks {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.contactclasse {
+    color: black;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contactinfo {
+    color: black;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*direitos*/
+footer {
+    color: black;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+

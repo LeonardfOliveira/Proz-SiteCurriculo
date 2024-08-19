@@ -1,159 +1,166 @@
-
 /* Estilo de página */
-* body {
+body {
     background: white;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-    }
+}
 
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .figure img {
-        display: block;
-        margin: 0 auto;
-    }
-    
-    nav ul {
-        font-family: Arial, Helvetica, sans-serif;
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: right;
-    }
-    
-    nav ul li {
-        margin: 0 10px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: rgb(17, 153, 231);;;
-    }
-    
-    nav a:hover {
-        color: rgb(17, 153, 231);
-        transition: 0.3s all;
-    }
-    
-    #inscreva-se-btn {
-        background-color: rgb(17, 153, 231);
-        font-family: Arial, Helvetica, sans-serif;
-        border: 1.5px solid rgb(5, 5, 5);
-        color: rgb(246, 247, 248);
-        padding: 10px;
-        border-radius: 15px;
-        text-decoration: none;
-    }
-    
-    #inscreva-se-btn:hover {
-        background-color: rgb(17, 153, 231);;
-        color: white;
-    }
-
-/* Estilização do login */
-
-main {
+header {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
-    max-width: 1200px;
     justify-content: space-between;
+    align-items: center;
 }
 
-h2 {
-    font-size: 30px;
-    line-height: 0.1px;
+.figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
     font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-span {
+nav ul li a {
+    text-decoration: none;
     color: rgb(17, 153, 231);
 }
 
-.login-password {
-    display: flex;
-    width: 120%;
-    flex-direction: column;
-    
+nav a:hover {
+    color: rgb(17, 153, 231);
+    transition: 0.3s all;
 }
 
-.login-pass {
-    border: 2px solid rgb(17, 153, 231);
+/* Estilo do botão de login */
+#login-btn {
+    background-color: rgb(17, 153, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(5, 5, 5);
+    color: rgb(246, 247, 248);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#login-btn:hover {
+    background-color: rgb(17, 153, 231);
+    color: white;
+}
+
+/* Container e estilo do formulário de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.login {
+    background-color: rgb(17, 153, 231);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000041;
+    padding: 20px;
+    max-width: 400px;
     width: 100%;
 }
 
-.input-group {
+.login-image {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-}
-
-.input-box {
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    flex-direction: column;
-    justify-content: right; 
-    justify-items: right;
-    width: 110%;
-}
-
-label {
-    margin-bottom: 0.5rem;
-    color: rgb(17, 153, 231);
-}
-
-input {
-    border: 2px solid rgb(17, 153, 231);
-    margin-top: 20px;
-    height: 20px;
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    font-size: 15px;
-}
-
-.open {
-    width: 110%;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#open-btn{
-    background-color: rgb(17, 153, 231);
-    border: 0.5px solid black;
-    color: rgb(240, 245, 248);
-    padding: 10px;
-    border-radius: 15px;
-    text-decoration: none;   
-}
-
-#open-btn:hover{
-    background-color: rgb(17, 153, 231);
-        color: white;
-    }
-
-/*Article*/
-article img {
-        max-width: 100%;
-        height: auto;
-        align-self: flex-end;
-    }
-
-/*estilo contatos*/
-.subtitulo {
-    display: flex;
-    margin: 5px;
-    color: black;
     justify-content: center;
-  
-} 
+    align-items: center;
+}
 
-/*redes sociais*/
+.login-image img {
+    max-width: 75%;
+    height: auto;
+}
+
+h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input.login-pass {
+    width: 75%;
+    margin: 5px;
+    padding: 0.8rem 3.2rem;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid  black;
+    box-shadow: 1px 1px 6px #00000041;
+    font-size: 0.8rem;
+}
+
+.input-box,
+.open {
+    margin-top: 10px;
+}
+
+.input-box a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* Estilo do botão de abertura */
+#open-btn {
+    background-color: rgb(17, 153, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(5, 5, 5);
+    color: rgb(246, 247, 248);
+    padding: 10px;
+    width: 100%;
+    max-width: 125px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#open-btn:hover {
+    background-color: rgb(17, 153, 231);
+    color: white;
+}
+
+/* Estilo contatos */
+.subtitulo {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px auto;
+    color: black;
+}
+
+/* Redes sociais */
 .socialnetworks {
     color: black;
     display: flex;
@@ -161,33 +168,59 @@ article img {
     flex-wrap: wrap;
     max-width: 250px;
     margin: auto;
-    padding: auto; 
 }
 
-.contactclasse {
-    color: black;
-    display: flex;
-    margin: auto;
-    justify-content: center;
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    aside {
+        margin: 20px 0;
+    }
+
+    #login-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-.contactinfo {
-    color: black;
-    display: flex;
-    margin: auto;
-    justify-content: center;
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .image {
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
 }
-
-/*direitos*/
-footer {
-    color: black;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-
-
-
-
 

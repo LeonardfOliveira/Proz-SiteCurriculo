@@ -1,150 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de formulário</title>
+    <title>Formulário de Currículo</title>
     <link rel="stylesheet" href="./style/formulario.css">
-    <script src="/Asset/script/script.js"></script>
 </head>
+<header>
+    <div class="figure">
+        <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html"><strong>Início</strong></a></li>
+            <li><a href="./Sobre.html"><strong>Quem Somos</strong></a></li>
+            <li><a href="./Servico.html"><strong>Serviços</strong></a></li>
+            <li><a href="./Contatos.html"><strong>Contatos</strong></a></li>
+            <li><a href="./login.html" id="login-btn">Fazer Login</a></li>
+       </ul>
+    </nav>
+</header>
+
 <body>
-    <!-- menu de acessso -->
-    <header>
-        <div class="figure">
-            <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./Sobre.html">Sobre</a></li>
-                <li><a href="./Servico.html">Serviços</a></li>
-                <li><a href="./Portfólio/portfolio.html">Portfólios</a></li>
-                <li><a href="./login.html" id="inscreva-se-btn">Já tem uma conta?</a></li>
-           </ul>
-        </nav>
-    </header>
-
-    <section>
     <div class="container">
-        <h2>Criar portfólio profissional</h2>
-        
-        <form action="/submit-form" method="post">
-            <fieldset>
-                <legend>Sobre Mim</legend>
-                <div class="form-group">
-                    <label for="resumo">Breve resumo de qualificações:<span class="required">*</span></label>
-                    <textarea id="resumo" name="resumo" required></textarea>
-                </div>
+        <h2>Criação de portfólio</h2>
+        <form id="curriculoForm">
+            <fieldset>  
+                <legend>Informações Gerais</legend>
+        <section>
+            <div class="form-group">
+                <label for="resumo">Resumo de Qualificações</label>
+                <textarea id="resumo" name="resumo"></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="Softskills">Softskills:<span class="required">*</span></label>
-                    <textarea id="Softskills" name="Softskills" required></textarea>
-                </div>
+            <div class="form-group">
+                <label for="softSkills">Soft Skills</label>
+                <textarea id="softSkills" name="softSkills"></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="HardSkills:">HardSkills:<span class="required">*</span></label>
-                    <textarea id="HardSkills" name="HardSkills" required></textarea>
-                </div>
+            <div class="form-group">
+                <label for="hardSkills">Hard Skills</label>
+                <textarea id="hardSkills" name="hardSkills"></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="Hobbies">Hobbies:<span class="required">*</span></label>
-                    <textarea id="Hobbies" name="Hobbies" required></textarea>
-                </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <textarea id="hobbies" name="hobbies"></textarea>
+            </div>
+        </section>
+    </fieldset>
 
-            </fieldset>
-
-            <fieldset>
-                <legend>Formação</legend>
-                <div class="form-group">
-                    <label for="escolaridade">Escolaridade<span class="required">*</span></label>
-                    <input type="text" id="escolaridade" name="escolaridade" required>
-                </div>
-                <div class="form-group">
-                    <label for="areaEstudo">Área de estudo<span class="required">*</span></label>
-                    <input type="text" id="areaEstudo" name="areaEstudo" required>
-                </div>
-                <div class="form-group">
-                    <label for="instituicaoEnsino">Instituição de ensino<span class="required">*</span></label>
-                    <input type="text" id="instituicaoEnsino" name="instituicaoEnsino" required>
-                </div>
-                <div class="form-group">
-                    <label class="checkbox-group">
-                        <input type="checkbox" name="iscurrent" id="iscurrent">
-                        <span>Atualmente Matriculado</span>
-                    </label>
-                </div>
-                <div class="form-group date-group">
-                    <label for="mesInicio">Data de Início:</label>
-                    <select name="mesInicio" id="mesInicio" required>
-                        <option value="">Mês</option>
-                        <!-- Opções de mês -->
-                        <option value="01">Janeiro</option>
-                        <option value="02">Fevereiro</option>
-                        <option value="03">Março</option>
-                        <option value="04">Abril</option>
-                        <option value="05">Maio</option>
-                        <option value="06">Junho</option>
-                        <option value="07">Julho</option>
-                        <option value="08">Agosto</option>
-                        <option value="09">Setembro</option>
-                        <option value="10">Outubro</option>
-                        <option value="11">Novembro</option>
-                        <option value="12">Dezembro</option>
-                    </select>
-                    <select name="anoInicio" id="anoInicio" required>
-                        <option value="">Ano</option>
-                        <!-- Opções de ano serão preenchidas com JavaScript -->
-                    </select>
-                </div>
-                <div class="form-group date-group">
-                    <label for="mesFim">Data de Conclusão:</label>
-                    <select name="mesFim" id="mesFim">
-                        <option value="">Mês</option>
-                        <option value="01">Janeiro</option>
-                        <option value="02">Fevereiro</option>
-                        <option value="03">Março</option>
-                        <option value="04">Abril</option>
-                        <option value="05">Maio</option>
-                        <option value="06">Junho</option>
-                        <option value="07">Julho</option>
-                        <option value="08">Agosto</option>
-                        <option value="09">Setembro</option>
-                        <option value="10">Outubro</option>
-                        <option value="11">Novembro</option>
-                        <option value="12">Dezembro</option>
-                    </select>
-                    <select name="anoFim" id="anoFim">
-                        <option value="">Ano</option>
-                        <!-- Opções de ano serão preenchidas com JavaScript -->
-                    </select>
-                </div>
-            </fieldset>
+    <fieldset>  
+        <legend>Informações Complementares</legend>
+            <div class="form-group">
+                <label for="infoComplementares">Certificações e intercâmbios</label>
+                <textarea id="infoComplementares" name="infoComplementares"></textarea>
+            </div>
+        </fieldset>
+             
+        <fieldset>
+            <legend>Idiomas</legend>
+            
+            <div class="language-container">
+              <label for="language-select">Selecionar Idioma:</label>
+              <select id="language-select">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+                <!-- Inicialmente, esses são os idiomas disponíveis -->
+              </select>
+              
+              <label for="proficiency-select">Selecionar Nível:</label>
+              <select id="proficiency-select">
+                <option value="basico">Básico</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+                <option value="fluente">Fluente</option>
+              </select>
+            </div>
+          
+            <div class="button-container">
+              <button class="language-btn" id="remove-language">&#128465; Remover Idioma</button>
+              <button class="language-btn" id="add-language">&#10000; Adicionar Idioma</button>
+            </div>
+          </fieldset>
 
             <fieldset>
                 <legend>Experiências</legend>
                 <div class="form-group">
-                    <label for="escolaridade">Empresas<span class="required">*</span></label>
-                    <input type="text" id="escolaridade" name="escolaridade" required>
+                    <label for="empresas">Empresas<span class="required">*</span></label>
+                    <input type="text" id="empresas" name="empresas" required>
                 </div>
                 <div class="form-group">
-                    <label for="areaEstudo">Área de atuação<span class="required">*</span></label>
-                    <input type="text" id="areaEstudo" name="areaEstudo" required>
+                    <label for="areaAtuacao">Área de Atuação<span class="required">*</span></label>
+                    <input type="text" id="areaAtuacao" name="areaAtuacao" required>
                 </div>
                 <div class="form-group">
-                    <label for="instituicaoEnsino">Cargo<span class="required">*</span></label>
-                    <input type="text" id="instituicaoEnsino" name="instituicaoEnsino" required>
+                    <label for="cargo">Cargo<span class="required">*</span></label>
+                    <input type="text" id="cargo" name="cargo" required>
                 </div>
                 <div class="form-group">
                     <label class="checkbox-group">
                         <input type="checkbox" name="iscurrent" id="iscurrent">
-                        <span>Atualmente empregado</span>
+                        <span>Atualmente Empregado</span>
                     </label>
                 </div>
                 <div class="form-group date-group">
-                    <label for="mesInicio">Data de admissão:</label>
+                    <label for="mesInicio">Data de Admissão:</label>
                     <select name="mesInicio" id="mesInicio" required>
                         <option value="">Mês</option>
-                        <!-- Opções de mês -->
                         <option value="01">Janeiro</option>
                         <option value="02">Fevereiro</option>
                         <option value="03">Março</option>
@@ -164,7 +128,7 @@
                     </select>
                 </div>
                 <div class="form-group date-group">
-                    <label for="mesFim">Data de demissão:</label>
+                    <label for="mesFim">Data de Demissão:</label>
                     <select name="mesFim" id="mesFim">
                         <option value="">Mês</option>
                         <option value="01">Janeiro</option>
@@ -185,46 +149,45 @@
                         <!-- Opções de ano serão preenchidas com JavaScript -->
                     </select>
                 </div>
-            </fieldset>
+        
+        <div class="button-container">
+            <button class="language-btn" id="remove-language" onclick="adicionarExperiencia()">&#128465; Remover Experiência</button>
+            <button class="language-btn" id="add-language" onclick="adicionarExperiencia()">&#10000; Adicionar outra experiência</button>
+          </div>
+        </fieldset>
 
-            <fieldset>
-                <legend>Preferências de Portfólio</legend>
-                <div class="form-group">
-                    <label>Escolha o estilo do seu portfólio:</label>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="moderno" name="estiloPortfolio[]" value="moderno">
-                        <label for="moderno">Moderno</label>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="classico" name="estiloPortfolio[]" value="classico">
-                        <label for="classico">Clássico</label>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="criativo" name="estiloPortfolio[]" value="criativo">
-                        <label for="criativo">Criativo</label>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="outro" name="estiloPortfolio[]" value="outro">
-                        <label for="outro">Outro:</label>
-                        <input type="text" id="outroEstilo" name="outroEstilo">
-                    </div>
-                </div>
-            </fieldset>
+    <fieldset>
+        <legend>Projetos</legend>
+        <div class="upload-group">
+            <label class="project" for="projetos">Upload de Projetos</label>
+            <input type="file" id="projetos" name="projetos" multiple>
+        </div>
+    </fieldset>
 
-            <fieldset>
-                <legend>Informações Adicionais</legend>
-                <div class="form-group">
-                    <label for="objetivosPortfolio">Objetivos com este portfólio<span class="required">*</span></label>
-                    <textarea id="objetivosPortfolio" name="objetivosPortfolio" required></textarea>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Upload de projetos</legend>
-                <div class="form-group">
-                    <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*">
-                </div>
-            </fieldset>
+    
+    <fieldset>
+        <legend>Preferências de Portfólio</legend>
+        <div class="form-group">
+            <label>Escolha o estilo do seu portfólio:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="moderno" name="estiloPortfolio[]" value="moderno">
+                <label for="moderno">Moderno</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="classico" name="estiloPortfolio[]" value="classico">
+                <label for="classico">Clássico</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="criativo" name="estiloPortfolio[]" value="criativo">
+                <label for="criativo">Criativo</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="outro" name="estiloPortfolio[]" value="outro">
+                <label for="outro">Outro:</label>
+                <input type="text" id="outroEstilo" name="outroEstilo">
+            </div>
+        </div>
+    </fieldset>
 
             <fieldset>
                 <legend>Redes Sociais (Opcional)</legend>
@@ -242,45 +205,39 @@
                 </div>
             </fieldset>
 
-            <fieldset>
-                <legend>Configurações de Privacidade</legend>
-                <div class="form-group">
-                    <label>Quem pode visualizar seu portfólio:</label>
-                    <div class="radio-group">
-                        <input type="radio" id="publico" name="visibilidade" value="publico" checked>
-                        <label for="publico">Público</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" id="privado" name="visibilidade" value="privado">
-                        <label for="privado">Privado (Somente com link direto)</label>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Aceitação dos Termos</legend>
-                <div class="form-group">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="termos" name="termos" required>
-                        <label for="termos">Li e concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>.</label>
-                    </div>
-                </div>
-            </fieldset>
-
-            <div class="form-group">
-                <button type="save" class="btn"><a src="./Portfólio/portfolio.html">Salvar</a></button>
-                <button type="change" class="btn"><a src="./Portfólio/portfolio.html">Alterar</a></button>
-                <button type="following" class="btn"><a src="./Portfólio/portfolio.html">Seguinte</a></button>
+        <fieldset>
+            <legend>Contatos</legend>
+            <div class="contact-group">
+                <label class="contact-label" for="email">Email de Contato</label>
+                <input type="email" id="email" name="email" placeholder="Email de Contato">
             </div>
-        </form>
-    </div>
-    <footer>
-    </section>  
+            
+            <div class="contact-group">
+                <label class="contact-label" for="telefone">Telefone de Contato</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone Comercial">
+            </div>
+            
+            <div class="contact-group">
+                <label class="contact-label" for="website">Website</label>
+                <input type="url" id="website" name="website" placeholder="Site Comercial">
+            </div>            
+        </fieldset>
+    </form>
+</div>
+</section>
 
- <!-- Rede sociais -->
- <section>
+<section>
+    <div class="form-change">
+        <button class= "button-btn" type="save" onclick="salvarFormulario()">Salvar</button>
+        <button class= "button-btn" type="change" onclick="alterarFormulario()">Alterar</button>
+        <button class= "button-btn" type="following" onclick="seguirFormulario()">Seguir</button>
+    </div>
+</section>
+      
+<!-- Redes sociais -->
+<section>
     <div style="text-align: right;" class="contact">
-        <h4 class="subtitulo"><strong>Siga-nos</strong></h4>
+        <h4 class="subtitulo"><strong>Nossas Redes Sociais</strong></h4>
     </div>
 </section>
 
@@ -289,28 +246,35 @@
         <a href="https://www.instagram.com" target="_blank"><img width="40" height="40" src="./image/Instagram.svg" alt="Instagram"></a>
         <a href="https://www.linkedin.com" target="_blank"><img width="40" height="40" src="./image/LinkedIn.svg" alt="LinkedIn"></a>
         <a href="https://www.facebook.com" target="_blank"><img width="40" height="40" src="./image/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="X"></a>
+        <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="Twitter"></a>
         <a href="https://www.youtube.com" target="_blank"><img width="40" height="40" src="./image/Youtube.svg" alt="YouTube"></a>
-   </div>
-</section>
-
-<section class="address">
-    <div class="contactclasse">
-        <h3 classe="contacttitle">Contato</h3>
-    </div>
-
-    <div class="contactinfo">
-        &#x270D; End: Rua Americo Vespulcio, 123, Centro, São Paulo, SP &nbsp;
-        &#x2709; CEP: 01000-000 &nbsp;
-        &#x0260E; Tel: (11) 1234-5678 &nbsp;
-        &commat; Email: contato@prozconnect.com.br
     </div>
 </section>
 
-<!-- Direitos reservados -->
 <footer>
-<p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
+    <p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
 </footer>
 
+<script src="./script/servico.js"></script>
+<script>
+    function salvarFormulario() {
+        // Lógica para salvar o formulário
+        alert("Formulário salvo!");
+        window.location.href = './portfolio.html';
+    }
+
+    function alterarFormulario() {
+        // Lógica para alterar o formulário
+        alert("Formulário alterado!");
+        window.location.href = './portfolio.html';
+    }
+
+    function seguirFormulario() {
+        // Lógica para seguir com o formulário
+        alert("Seguindo com o formulário!");
+        window.location.href = './portfolio.html';
+    }
+</script>
 </body>
 </html>
+

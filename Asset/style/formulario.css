@@ -1,19 +1,21 @@
 /* Estilo de página */
-* body {
-    background: white;
-    color: black;
+:root {
+    --primary-color: black;
+    --secondary-color: black;
+    --background-color: white;
+    --accent-color: #2196F3;
+    --text-color: black;
+}
+
+body {
+    background: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-    }
-
-:root {
-    --primary-color:  black;
-    --secondary-color: black;
-    --background-color:  black;
-    --accent-color: #2196F3;
 }
 
+/* Cabeçalho */
 header {
     display: flex;
     flex-direction: row;
@@ -21,71 +23,79 @@ header {
     align-items: center;
 }
 
+/* Imagem dentro de uma figura */
 .figure img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
+/* Navegação */
 nav ul {
-    font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: right;
-}
-
-nav ul li {
-    margin: 0 10px;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(17, 153, 231);;;
+    color: var(--accent-color);
 }
 
 nav a:hover {
-    color: rgb(17, 153, 231);
-    transition: 0.3s all;
+    color: var(--primary-color);
+    transition: color 0.3s;
 }
 
-#inscreva-se-btn {
-    background-color: rgb(17, 153, 231);
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1.5px solid rgb(5, 5, 5);
-    color: rgb(246, 247, 248);
+/* Estilo do botão de login */
+#login-btn {
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-color);
+    color: var(--background-color);
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
+    text-align: center;
+    font-family: inherit;
 }
 
-#inscreva-se-btn:hover {
-    background-color: rgb(17, 153, 231);;
-    color: white;
+#login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
+/* Container principal */
 .container {
-    font-family: Arial, Helvetica, sans-serif;
     width: 90%;
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 10px;
+    justify-content: center;
 }
 
+/* Estilos para formulários */
 h2 {
     text-align: center;
-    color: rgb(17, 153, 231);;
+    color: var(--accent-color);
     margin-bottom: 2rem;
 }
 
 fieldset {
-    border: 1px solid white;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000041;
+  
 }
 
 legend {
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(17, 153, 231);
     padding: 0 0.5rem;
     font-weight: bold;
 }
@@ -103,27 +113,90 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="url"],
-input[type="file"],
 select,
 textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0.8px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000041;
     font-size: 1rem;
+    box-sizing: border-box;
 }
+
+.upload-group {
+    margin-bottom: 1rem;
+}
+
+label.project {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="tel"] {
+    width: 50%;
+    margin: 5px;
+    padding: 0.5rem;
+    border: 0.8px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000041;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
 
 textarea {
     resize: vertical;
     min-height: 100px;
 }
 
+/*idioma*/
+.language-container {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .language-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid var(--primary-color);
+    box-shadow: 1px 1px 6px #00000041;
+    border-radius: 10px;
+  }
+  
+  .language-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+/* Grupos de Inputs */
 .checkbox-group,
 .radio-group {
-    border: white;
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+
 }
 
 .checkbox-group input,
@@ -131,117 +204,120 @@ textarea {
     margin-right: 0.5rem;
 }
 
-.checkbox-group label,
-.radio-group label {
-    margin: 0;
-}
-
 .date-group {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 10px;
 }
 
 .date-group select {
-    width: 48%;
+    width: 45%;
 }
 
+/* Botões de salvar, alterar e seguir*/
+.form-change {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-btn,
 .form-group button {
-    border: 2px solid black;
-    background-color: rgb(17, 153, 231);
-    color: #fff;
-    width: calc(33.33% - 5px);
+    border: 2px solid var(--primary-color);
+    background-color: var(--accent-color);
+    color: var(--background-color);
     padding: 0.75rem;
-    border-radius: 20px;
+    width: auto;
+    min-width: 100px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, opacity 0.3s;
 }
 
-button[type="submit"] {
-    background-color: rgb(17, 153, 231);
-    padding: 10px;
-    color: #fff;
-}
-
-button[type="reset"] {
-    background-color: rgb(17, 153, 231);
-    padding: 10px;
-    color: #fff;
-    margin-top: 0.5rem;
-}
-
-button[type="button"] {
-    background-color: rgb(17, 153, 231);
-    padding: 10px;
-    color: #fff;
-    margin-top: 0.5rem;
-}
-
-button:hover {
+#button-btn:hover {
     opacity: 0.9;
 }
 
-.required {
-    color: rgb(17, 153, 231);
+/* Estilo específico para botões de ação */
+.button-btn[type="save"],
+.button-btn[type="change"],
+.button-btn[type="following"] {
+    background-color: #007bff;
+    color: white;
+    border: 0.8px solid black;
+    border-radius: 15px;
 }
 
 @media (max-width: 600px) {
-    .date-group select {
-        width: 100%;
-        margin-bottom: 0.5rem;
+    .form-change {
+        flex-direction: column;
+        align-items: center;
     }
 
+    button,
     .form-group button {
         width: 100%;
-        margin-top: 0.5rem;
+        max-width: 200px;
+        margin-bottom: 10px;
     }
 }
 
-/*estilo contatos*/
+/* Estilos de Contato */
 .subtitulo {
     display: flex;
-    margin: 5px;
-    color: black;
     justify-content: center;
-  
-} 
+    text-align: center;
+    margin: 30px;
+    color: var(--text-color);
+}
 
-/*redes sociais*/
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px auto;
+    color: var(--text-color);
+}
+
+/* Redes sociais */
 .socialnetworks {
-    color: black;
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 250px;
     margin: auto;
-    padding: auto; 
 }
 
-.contactclasse {
-    color: black;
-    display: flex;
-    margin: auto;
-    justify-content: center;
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }
-
-.contactinfo {
-    color: black;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-/*direitos*/
-footer {
-    color: black;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-
-
-
-
 

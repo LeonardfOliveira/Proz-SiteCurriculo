@@ -1,11 +1,4 @@
-/* Variáveis */
-:root {
-    --primary-color: rgb(17, 153, 231);
-    --text-color: black;
-    --bg-color: white;
-}
-
-/* Estilo de página */
+/* Estilo Geral */
 body {
     background: white;
     max-width: 1200px;
@@ -46,7 +39,7 @@ nav a:hover {
     transition: 0.3s all;
 }
 
-#login-btn {
+#loga-se-btn {
     background-color: rgb(17, 153, 231);
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid rgb(5, 5, 5);
@@ -56,100 +49,79 @@ nav a:hover {
     text-decoration: none;
 }
 
-#login-btn:hover {
+#loga-se-btn:hover {
     background-color: rgb(17, 153, 231);
     color: white;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    justify-content: space-between;
-}
-
-h2 {
+.title {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
     color: rgb(17, 153, 231);
-    margin-bottom: 20px;
-    font-weight: 300;
 }
 
-span {
-    color: var(--primary-color);
-}
-
-p {
-    line-height: 1.5;
-    max-width: 1200px;
+input, .form-control, .textarea {
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    margin: 5px 0;
+    border: 1px solid rgb(5, 5, 5);
+    font-size: 1rem; 
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    margin-top: 20px;
 }
 
-article img {
-    display: block; /* Centraliza a imagem */
-    max-width: 90%; /* Garante que a imagem seja responsiva */
-    height: auto;
-    margin: 20px auto; /* Ajusta o espaçamento e centraliza */
-    padding: 20px; /* Reduz o padding para ser mais responsivo */
-}
-
-form {
+.send {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    justify-content: center;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-form input[type="submit"] {
-    height: 50px;
-    width: 100%; /* Torna o botão responsivo */
-    max-width: 300px; /* Limita a largura máxima */
-    background-color: var(--primary-color);
+#send-btn {
+    background-color: rgb(17, 153, 231);
+    width: 180px;
+    border: 1px solid rgb(5, 5, 5);
+    color: rgb(240, 245, 248);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;   
+}
+
+#send-btn:hover {
+    background-color: rgb(17, 153, 231);
     color: white;
-    font-weight: bold;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
 }
 
-input {
-    margin-top: 20px;
-    height: 20px;
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    font-size: 15px;
-    width: 100%; /* Torna o campo de input responsivo */
-    max-width: 600px;
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
 }
 
-/* Estilo contatos */
+/* Estilo Contatos */
 .subtitulo {
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
     text-align: center;
-    margin: 30px;
+    margin: 30px auto;
     color: var(--text-color);
 }
 
-footer {
+.contactclasse, .contactinfo, footer {
+    color: black;
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin: 5px auto;
-    color: var(--text-color);
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
-/* Redes sociais */
+/* Redes Sociais */
 .socialnetworks {
     color: var(--text-color);
     display: flex;
@@ -159,7 +131,7 @@ footer {
     margin: auto;
 }
 
-/* Responsividade */
+/* Media Queries para Responsividade */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -190,16 +162,25 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
     h2 {
         font-size: 28px;
     }
-    
-    #login-btn {
+
+    .form {
         width: 100%;
     }
 
-    form input[type="submit"] {
-        max-width: 100%; /* Remove a largura máxima para ocupar todo o espaço disponível */
+    .send {
+        width: 100%;
     }
 }
+
+
+ 
+
+
+
+
+
+

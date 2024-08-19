@@ -1,109 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./style/cadastro.css" rel="stylesheet">
-    <title>ProzConnect</title>
+    <title>Tela de Formulário</title>
+    <link rel="stylesheet" href="./style/cadastro.css">
+    <script src="./style/cadastro.css"></script>
 </head>
 <body>
-
-    <!-- menu de acessso -->
+    <!-- Menu de acesso -->
     <header>
         <div class="figure">
             <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./Sobre.html">Sobre</a></li>
-                <li><a href="./Servico.html">Serviços</a></li>
-                <li><a href="./Portfólio/portfolio.html">Portfólios</a></li>
-                <li><a href="./login.html" id="inscreva-se-btn">Já tem uma conta?</a></li>
+                <li><a href="../index.html"><strong>Início</strong></a></li>
+                <li><a href="./Sobre.html"><strong>Quem Somos</strong></a></li>
+                <li><a href="./Servico.html"><strong>Serviços</strong></a></li>
+                <li><a href="./Contatos.html"><strong>Contatos</strong></a></li>
+                <li><a href="./login.html" id="login-btn">Fazer Login</a></li>
            </ul>
         </nav>
     </header>
 
-    <section>
-    <div class="container">
-        <div class="form">
-            <form action="#">
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="firstname">Primeiro Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
-                    </div>
+    <!-- Imagem -->
+    <main>
+    <section class="image">
+    <img src="./image/form.gif" alt=""/>
+    </section>
 
-                    <div class="input-box">
-                        <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="confirmPassword">Confirme sua Senha</label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+    <!-- Formulário -->
+    <section class="register">
+        <div class="container">
+            <form action="#">  
+                <div class="form-header">
+                    <div class="Title">
+                        <legend><h2><strong>Primeiro acesso:</strong></h2></legend>
                     </div>
                 </div>
 
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6>Gênero</h6>
-                    </div>
-
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input id="female" type="radio" name="gender">
-                            <label for="female">Feminino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="male" type="radio" name="gender">
-                            <label for="male">Masculino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="others" type="radio" name="gender">
-                            <label for="others">Outros</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="none" type="radio" name="gender">
-                            <label for="none">Prefiro não dizer</label>
-                        </div>
-                    </div>
+            <div class="input-group">
+                <div class="input-subgroup1">
+                <div class="input-box">
+                    <label for="firstname">Nome:</label>
+                    <input id="firstname" type="text" name="firstname" placeholder="Digite o seu nome" required>
                 </div>
 
-                
-        <div class="form-group">
-            <div class="container">
-                <button type="save" class="btn"><a heaf="formulário.html">Salvar</a></button>
-                <button type="change" class="btn"><a heaf="formulário.html">Alterar</a></button>
-                <button type="following" class="btn"><a heaf="formulário.html">Seguinte</a></button>
+                <div class="input-box">
+                    <label for="lastname">Sobrenome:</label>
+                    <input id="lastname" type="text" name="lastname" placeholder="Digite o seu sobrenome" required>
+                </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="text" name="lastname" placeholder="Digite o seu e-mail" required>
+                </div> 
+
+                <div class="input-box">
+                    <label for="password">Senha:</label>
+                    <input id="password" type="password" name="password" placeholder="Digite a sua senha" required>
+                </div> 
+
+                <div class="input-box">
+                    <label for="confirpassword">Confirme sua senha:</label>
+                    <input id="confirpassword" type="password" name="password" placeholder="Digite a sua senha novamente" required>
+                </div> 
+
+                <div class="box">
+                    <input id="newlatter" type="checkbox" name="newlatter">
+                    <label for="newlatter">Li e concordo os termos de serviços e nossa política de privacidade</label>
+                </div> 
             </div>
-        </div>
+
+            <div class="button">
+                <b><a href="./formulário.html" id="inscreva-btn"><b></b>Inscreva-se</b></a> 
+            </div>
+
+            <footer>
+                <div class="log-sociais">
+                    <p>ou</p>
+                    <a href="https://www.linkedin.com" target="_blank"><img width="40" height="40" src="./image/LinkedIn.svg" alt="LinkedIn"></a>
+                    <a href="https://www.gmail.com" target="_blank"><img width="40" height="40" src="./image/gmail-icon-2.svg" alt="Google"></a>
+                    <a href="https://www.GitHub.com" target="_blank"><img width="40" height="40" src="./image/github.svg" alt="GitHub"></a>
+                    <p><b>Já possui uma conta? Faça <a href="./login.html" id="open-btn">Login</b></p></a> 
+                    </div>
+            </footer> 
+            </div>
             </form>
-           </section>
+        </div>
+    </section>
+   </main>
 
     <section>
-            <div style="text-align: right;" class="contact">
-                <h4 class="subtitulo"><strong>Siga-nos</strong></h4>
-            </div>
+        <div style="text-align: right;" class="contact">
+            <h4 class="subtitulo"><strong>Nossas Redes Sociais</strong></h4>
+        </div>
     </section>
     
     <div class="socialnetworks">
@@ -112,24 +105,11 @@
         <a href="https://www.facebook.com" target="_blank"><img width="40" height="40" src="./image/facebook.svg" alt="Facebook"></a>
         <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="X"></a>
         <a href="https://www.youtube.com" target="_blank"><img width="40" height="40" src="./image/Youtube.svg" alt="YouTube"></a>   
-</div>
+    </div>
         
-            <div class="contactclasse">
-                <h3 classe="contacttitle">Contato</h3>
-            </div>
-    
-            <div class="contactinfo">
-                &#x270D; End: Rua Americo Vespulcio, 123, Centro, São Paulo, SP &nbsp;
-                &#x2709; CEP: 01000-000 &nbsp;
-                &#x0260E; Tel: (11) 1234-5678 &nbsp;
-                &commat; Email: contato@prozconnect.com.br
-            </div>
-    
-    </section>
-    
     <footer>
         <p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
     </footer>
     
-    </body>
-    </html>
+</body>
+</html>
