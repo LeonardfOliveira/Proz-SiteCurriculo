@@ -6,4 +6,4 @@ ProzConnect é uma plataforma moderna desenvolvida com as tecnologias CSS, JavaS
 
 **Objetivo:**
 
-Simplificar a criação de portfólios online, utilizando tecnologias modernas para ajudar os usuários a se destacarem no mercado de trabalho e atraírem novas oportunidades.
+Simplificar a criação de portfólios online, utilizando tecnologias modernas para ajudar os usuários a se destacarem no mercado de trabalho e atraírem novas oportunidades.# siteportfolio
