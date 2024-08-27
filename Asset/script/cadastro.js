@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const agreeCheckbox = document.getElementById('newlatter');
 
     // Preenche os campos com valores de exemplo
-    firstnameInput.value = 'Maria';
-    lastnameInput.value = 'Oliveira';
-    emailInput.value = 'maria.oliveira@example.com';
+    firstnameInput.value = 'Jonas';
+    lastnameInput.value = 'Abraam';
+    emailInput.value = 'jonas.abraam@prozconnect.com';
     passwordInput.value = 'senhaSegura123';
     confirmPasswordInput.value = 'senhaSegura123';
     agreeCheckbox.checked = true;

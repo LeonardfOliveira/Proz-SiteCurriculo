@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const loginButton = document.getElementById("open-btn");
 
     // Preenche os campos com valores de exemplo
-    loginInput.value = 'usuario@example.com';
+    loginInput.value = 'jonas.abraam@prozconnect.com';
     passwordInput.value = 'senhaExemplo123';
 
     form.addEventListener("submit", function(event) {
