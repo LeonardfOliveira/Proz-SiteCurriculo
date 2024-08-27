@@ -1,4 +1,4 @@
-/* Estilo de página */
+/* Estilização de página */
 body {
     background: white;
     max-width: 1200px;
@@ -16,7 +16,7 @@ header {
 .figure img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
@@ -31,7 +31,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(17, 153, 231);
+    color: black;
 }
 
 nav a:hover {
@@ -39,25 +39,33 @@ nav a:hover {
     transition: 0.3s all;
 }
 
-#loga-se-btn {
+
+/* estilização de botões de cadastro e login */
+#loga-se-btn, #cadastre-se-btn {
     background-color: rgb(17, 153, 231);
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid rgb(5, 5, 5);
+    border: 1px solid var(--primary-color);
     color: rgb(246, 247, 248);
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px #00000041;
+    border-radius: 10px;
 }
 
-#loga-se-btn:hover {
+#cadastre-se-btn, #loga-se-btn:hover {
     background-color: rgb(17, 153, 231);
     color: white;
 }
 
-h1 {
-    font-weight: 200;
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }
 
+/* estilização de conteúdo */
 main {
     display: flex;
     flex-direction: row;
@@ -69,11 +77,12 @@ main {
 h2 {
     font-size: 56px;
     line-height: 20px;
+    color:rgb(17, 153, 231);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 span {
-    color: rgb(17, 153, 231);
+    color: rgb(231, 19, 19);
 }
 
 p {
@@ -82,45 +91,36 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Inscreva-se agora */
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
-
-#cadastre-se-btn {
-    background-color: rgb(17, 153, 231);
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid rgb(5, 5, 5);
-    color: rgb(246, 247, 248);
-    padding: 10px;
-    border-radius: 15px;
-    text-decoration: none;
-}
-
-#cadastre-se-btn:hover {
-    background-color: rgb(17, 153, 231);
-    color: white;
-}
-
-/* Article */
+/* estilização de imagem */
 article img {
     max-width: 100%;
     height: auto;
     align-self: flex-end;
     margin: 50px;
+    margin-left: auto;
 }
 
-/* Estilo contatos */
+/* Estilização de contatos */
 .subtitulo {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     text-align: center;
     margin: 30px;
     color: var(--text-color);
 }
+
+/* Estilização de Redes sociais */
+.socialnetworks {
+    display: flex;
+    color: var(--text-color);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: auto;
+}
+
+/* estilização de rodapé */
 
 footer {
     display: flex;
@@ -130,17 +130,7 @@ footer {
     color: var(--text-color);
 }
 
-/* Redes sociais */
-.socialnetworks {
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 250px;
-    margin: auto;
-}
-
-/* Media Queries para responsividade */
+/* responsividade */
 @media (max-width: 768px) {
     header {
         flex-direction: column;

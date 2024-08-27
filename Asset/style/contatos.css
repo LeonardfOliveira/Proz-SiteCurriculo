@@ -1,4 +1,4 @@
-/* Estilo Geral */
+/* Estilização de página */
 body {
     background: white;
     max-width: 1200px;
@@ -16,7 +16,7 @@ header {
 .figure img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
@@ -31,7 +31,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(17, 153, 231);
+    color: black;
 }
 
 nav a:hover {
@@ -39,34 +39,45 @@ nav a:hover {
     transition: 0.3s all;
 }
 
-#loga-se-btn {
+
+/* estilização de botões de cadastro e login */
+#loga-se-btn, #cadastre-se-btn {
     background-color: rgb(17, 153, 231);
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid rgb(5, 5, 5);
+    border: 1px solid var(--primary-color);
     color: rgb(246, 247, 248);
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px #00000041;
+    border-radius: 10px;
 }
 
-#loga-se-btn:hover {
+#cadastre-se-btn, #loga-se-btn:hover {
     background-color: rgb(17, 153, 231);
     color: white;
 }
 
+.form {
+    flex-direction: column;
+    width: 100%;
+}
+
 .title {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(17, 153, 231);
+    color: rgb(231, 19, 19);
+    text-align: center;
 }
 
 input, .form-control, .textarea {
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 0.75rem;
     border-radius: 10px;
     margin: 5px 0;
     border: 1px solid rgb(5, 5, 5);
-    font-size: 1rem; 
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .form {
@@ -79,17 +90,19 @@ input, .form-control, .textarea {
     display: flex;
     justify-content: center;
     padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #send-btn {
     background-color: rgb(17, 153, 231);
-    width: 180px;
-    border: 1px solid rgb(5, 5, 5);
-    color: rgb(240, 245, 248);
+    border: 1px solid var(--primary-color);
+    color: rgb(246, 247, 248);
     padding: 10px;
+    width: 15%;
     border-radius: 15px;
-    text-decoration: none;   
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px #00000041;
+    border-radius: 10px;
 }
 
 #send-btn:hover {
@@ -105,30 +118,33 @@ input, .form-control, .textarea {
     color: black;
 }
 
-/* Estilo Contatos */
+/* Estilização de contatos */
 .subtitulo {
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 30px auto;
-    color: var(--text-color);
-}
-
-.contactclasse, .contactinfo, footer {
-    color: black;
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    text-align: center;
+    margin: 30px;
+    color: var(--text-color);
 }
 
-/* Redes Sociais */
+/* Estilização de Redes sociais */
 .socialnetworks {
-    color: var(--text-color);
     display: flex;
+    color: var(--text-color);
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 250px;
     margin: auto;
+}
+
+/* estilização de rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px auto;
+    color: var(--text-color);
 }
 
 /* Media Queries para Responsividade */
@@ -139,19 +155,6 @@ input, .form-control, .textarea {
         gap: 20px;
     }
 
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h2 {
-        font-size: 36px;
-    }
-
-    .form {
-        width: 100%;
-    }
-
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -160,21 +163,32 @@ input, .form-control, .textarea {
     nav ul li {
         margin-bottom: 10px;
     }
-}
 
-@media (max-width: 800px) {
-    h2 {
-        font-size: 28px;
+    .title h3 {
+        font-size: 1.5em;
     }
 
-    .form {
+    .contactinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .figure img {
+        max-width: 80%;
+    }
+
+    #send-btn {
         width: 100%;
     }
 
-    .send {
-        width: 100%;
+    .socialnetworks {
+        justify-content: space-around;
     }
 }
+
+
 
 
  

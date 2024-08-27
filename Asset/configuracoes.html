@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Currículo</title>
+    <link rel="stylesheet" href="./style/configuracao.css">
+</head>
+<body>
+    <header>
+        <div class="figure">
+            <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
+        </div>
+            <nav>
+            <ul>
+            <li><a href="./dashboard.html"><strong>Painel</strong></a></li>
+            <li><a href="./dados.html"><strong>Dados Pessoais</strong></a></li>
+            <li><a href="./formulário.html"><strong>Editar e Criar</strong></a></li>
+            <li><a href="./portfolio.html"><strong>Portfólio</strong></a></li>
+            <li><a href="./configuracoes.html"><strong>Configurações</strong></a></li>
+            <li><a href="./alterarsenha.html"><strong>Alterar Senha</strong></a></li>
+            <li><a href="../index.html" id="exit-btn">Sair</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="settings-section">
+            <h1>Configurações</h1>
+
+            <div id="notificacoes">
+                <h2>Notificações</h2>
+                <label>
+                    <input type="checkbox" name="email-notifications" checked>
+                    Receber notificações por e-mail
+                </label>
+                <label>
+                    <input type="checkbox" name="sms-notifications">
+                    Receber notificações por SMS
+                </label>
+                <label>
+                    <input type="checkbox" name="app-notifications" checked>
+                    Receber notificações pelo aplicativo
+                </label>
+            </div>
+
+            <div id="preferencias-conta">
+                <h2>Preferências de Conta</h2>
+                <label>
+                    <input type="checkbox" name="private-account">
+                    Tornar conta privada
+                </label>
+                <label>
+                    <input type="checkbox" name="show-profile">
+                    Exibir perfil publicamente
+                </label>
+                <label>
+                    <input type="checkbox" name="email-updates" checked>
+                    Receber atualizações por e-mail
+                </label>
+            </div>
+
+            <div id="idioma">
+                <h2>Idioma</h2>
+                <label for="language-select">Selecione o idioma:</label>
+                <select id="language-select" name="language">
+                    <option value="pt-BR">Português (Brasil)</option>
+                    <option value="en-US">Inglês (EUA)</option>
+                    <option value="es-ES">Espanhol (Espanha)</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <div style="text-align: right;" class="contact">
+                <h4 class="subtitulo"><strong>Nossas Redes Sociais</strong></h4>
+            </div>
+        </section>
+    
+        <div class="socialnetworks">
+            <a href="https://www.instagram.com" target="_blank"><img width="40" height="40" src="./image/Instagram.svg" alt="Instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img width="40" height="40" src="./image/LinkedIn.svg" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com" target="_blank"><img width="40" height="40" src="./image/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="X"></a>
+            <a href="https://www.youtube.com" target="_blank"><img width="40" height="40" src="./image/Youtube.svg" alt="YouTube"></a>
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
+        </footer>
+    </body>
+    </html>
+    

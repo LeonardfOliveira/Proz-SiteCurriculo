@@ -1,91 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Currículo</title>
     <link rel="stylesheet" href="./style/formulario.css">
 </head>
-<header>
-    <div class="figure">
-        <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
-    </div>
-    <nav>
-        <ul>
-            <li><a href="../index.html"><strong>Início</strong></a></li>
-            <li><a href="./Sobre.html"><strong>Quem Somos</strong></a></li>
-            <li><a href="./Servico.html"><strong>Serviços</strong></a></li>
-            <li><a href="./Contatos.html"><strong>Contatos</strong></a></li>
-            <li><a href="./login.html" id="login-btn">Fazer Login</a></li>
-       </ul>
-    </nav>
-</header>
 
 <body>
+    <header>
+        <div class="figure">
+            <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./dashboard.html"><strong>Painel</strong></a></li>
+                <li><a href="#sobre"><strong>Sobre</strong></a></li>
+                <li><a href="#habilidades"><strong>Habilidades</strong></a></li>
+                <li><a href="#portfolio"><strong>Portfólio</strong></a></li>
+                <li><a href="#experiencia"><strong>Experiência</strong></a></li>
+                <li><a href="#formacao"><strong>Formações</strong></a></li>
+                <li><a href="#idiomas"><strong>Idiomas</strong></a></li>
+                <li><a href="#viagens"><strong>Viagens</strong></a></li>
+                <li><a href="#contato"><strong>Contatos</strong></a></li>
+                <li><a href="../index.html" id="exit-btn">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
         <h2>Criação de portfólio</h2>
         <form id="curriculoForm">
-            <fieldset>  
-                <legend>Informações Gerais</legend>
-        <section>
-            <div class="form-group">
-                <label for="resumo">Resumo de Qualificações</label>
-                <textarea id="resumo" name="resumo"></textarea>
-            </div>
 
-            <div class="form-group">
-                <label for="softSkills">Soft Skills</label>
-                <textarea id="softSkills" name="softSkills"></textarea>
-            </div>
+            <fieldset id="sobre">
+                <legend>Sobre</legend>
+                <div class="form-group">
+                    <label for="resumo">Resumo de Qualificações</label>
+                    <textarea id="resumo" name="resumo"></textarea>
+                </div>
+            </fieldset>
 
-            <div class="form-group">
-                <label for="hardSkills">Hard Skills</label>
-                <textarea id="hardSkills" name="hardSkills"></textarea>
-            </div>
+            <fieldset id="habilidades">
+                <legend>Habilidades</legend>
+                <div class="form-group">
+                    <label for="softSkills">Soft Skills</label>
+                    <textarea id="softSkills" name="softSkills"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="hobbies">Hobbies</label>
-                <textarea id="hobbies" name="hobbies"></textarea>
-            </div>
-        </section>
-    </fieldset>
+                <div class="form-group">
+                    <label for="hardSkills">Hard Skills</label>
+                    <textarea id="hardSkills" name="hardSkills"></textarea>
+                </div>
 
-    <fieldset>  
-        <legend>Informações Complementares</legend>
-            <div class="form-group">
-                <label for="infoComplementares">Certificações e intercâmbios</label>
-                <textarea id="infoComplementares" name="infoComplementares"></textarea>
-            </div>
-        </fieldset>
-             
-        <fieldset>
-            <legend>Idiomas</legend>
-            
-            <div class="language-container">
-              <label for="language-select">Selecionar Idioma:</label>
-              <select id="language-select">
-                <option value="pt">Português</option>
-                <option value="en">Inglês</option>
-                <option value="es">Espanhol</option>
-                <!-- Inicialmente, esses são os idiomas disponíveis -->
-              </select>
-              
-              <label for="proficiency-select">Selecionar Nível:</label>
-              <select id="proficiency-select">
-                <option value="basico">Básico</option>
-                <option value="intermediario">Intermediário</option>
-                <option value="avancado">Avançado</option>
-                <option value="fluente">Fluente</option>
-              </select>
-            </div>
-          
-            <div class="button-container">
-              <button class="language-btn" id="remove-language">&#128465; Remover Idioma</button>
-              <button class="language-btn" id="add-language">&#10000; Adicionar Idioma</button>
-            </div>
-          </fieldset>
+                <div class="form-group">
+                    <label for="hobbies">Hobbies</label>
+                    <textarea id="hobbies" name="hobbies"></textarea>
+                </div>
+            </fieldset>
 
-            <fieldset>
+            <fieldset id="portfolio">
+                <legend>Portfólio</legend>
+                <div class="upload-group">
+                    <label for="projetos">Upload de Projetos</label>
+                    <input type="file" id="projetos" name="projetos" multiple>
+                </div>
+            </fieldset>
+
+            <fieldset id="experiencia">
                 <legend>Experiências</legend>
                 <div class="form-group">
                     <label for="empresas">Empresas<span class="required">*</span></label>
@@ -105,9 +87,10 @@
                         <span>Atualmente Empregado</span>
                     </label>
                 </div>
+                
                 <div class="form-group date-group">
-                    <label for="mesInicio">Data de Admissão:</label>
-                    <select name="mesInicio" id="mesInicio" required>
+                    <label for="mesinicio">Data de admissão:</label>
+                    <select name="mesinicio" id="mesinicio" required>
                         <option value="">Mês</option>
                         <option value="01">Janeiro</option>
                         <option value="02">Fevereiro</option>
@@ -122,14 +105,30 @@
                         <option value="11">Novembro</option>
                         <option value="12">Dezembro</option>
                     </select>
-                    <select name="anoInicio" id="anoInicio" required>
+                    <label for="anoinicio">Ano de admissão:</label>
+                    <select name="anoinicio" id="anoinicio">
                         <option value="">Ano</option>
-                        <!-- Opções de ano serão preenchidas com JavaScript -->
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
                     </select>
                 </div>
+                
                 <div class="form-group date-group">
-                    <label for="mesFim">Data de Demissão:</label>
-                    <select name="mesFim" id="mesFim">
+                    <label for="mesfim">Data de demissão:</label>
+                    <select name="mesfim" id="mesfim">
                         <option value="">Mês</option>
                         <option value="01">Janeiro</option>
                         <option value="02">Fevereiro</option>
@@ -144,137 +143,256 @@
                         <option value="11">Novembro</option>
                         <option value="12">Dezembro</option>
                     </select>
-                    <select name="anoFim" id="anoFim">
+                    <label for="anofim">Ano de demissão:</label>
+                    <select name="anofim" id="anofim">
                         <option value="">Ano</option>
-                        <!-- Opções de ano serão preenchidas com JavaScript -->
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
                     </select>
                 </div>
-        
-        <div class="button-container">
-            <button class="language-btn" id="remove-language" onclick="adicionarExperiencia()">&#128465; Remover Experiência</button>
-            <button class="language-btn" id="add-language" onclick="adicionarExperiencia()">&#10000; Adicionar outra experiência</button>
-          </div>
-        </fieldset>
-
-    <fieldset>
-        <legend>Projetos</legend>
-        <div class="upload-group">
-            <label class="project" for="projetos">Upload de Projetos</label>
-            <input type="file" id="projetos" name="projetos" multiple>
-        </div>
-    </fieldset>
-
-    
-    <fieldset>
-        <legend>Preferências de Portfólio</legend>
-        <div class="form-group">
-            <label>Escolha o estilo do seu portfólio:</label>
-            <div class="checkbox-group">
-                <input type="checkbox" id="moderno" name="estiloPortfolio[]" value="moderno">
-                <label for="moderno">Moderno</label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="classico" name="estiloPortfolio[]" value="classico">
-                <label for="classico">Clássico</label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="criativo" name="estiloPortfolio[]" value="criativo">
-                <label for="criativo">Criativo</label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="outro" name="estiloPortfolio[]" value="outro">
-                <label for="outro">Outro:</label>
-                <input type="text" id="outroEstilo" name="outroEstilo">
-            </div>
-        </div>
-    </fieldset>
-
-            <fieldset>
-                <legend>Redes Sociais (Opcional)</legend>
-                <div class="form-group">
-                    <label for="linkedin">LinkedIn:</label>
-                    <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/seuperfil">
-                </div>
-                <div class="form-group">
-                    <label for="github">GitHub:</label>
-                    <input type="url" id="github" name="github" placeholder="https://github.com/seuperfil">
-                </div>
-                <div class="form-group">
-                    <label for="outraRede">Outra Rede Social:</label>
-                    <input type="url" id="outraRede" name="outraRede" placeholder="https://...">
+                
+                <div class="button-container">
+                    <button type="button" class="language-btn" id="remover-experiencia">&#128465; Remover
+                        Experiência</button>
+                    <button type="button" class="language-btn" id="adicionar-experiencia">&#10000; Adicionar outra
+                        experiência</button>
                 </div>
             </fieldset>
 
-        <fieldset>
-            <legend>Contatos</legend>
-            <div class="contact-group">
-                <label class="contact-label" for="email">Email de Contato</label>
-                <input type="email" id="email" name="email" placeholder="Email de Contato">
-            </div>
-            
-            <div class="contact-group">
-                <label class="contact-label" for="telefone">Telefone de Contato</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="Telefone Comercial">
-            </div>
-            
-            <div class="contact-group">
-                <label class="contact-label" for="website">Website</label>
-                <input type="url" id="website" name="website" placeholder="Site Comercial">
-            </div>            
-        </fieldset>
-    </form>
-</div>
-</section>
+            <fieldset id="formacao">
+                <legend>Formações</legend>
+                <div class="form-group">
+                    <label for="curso">Cursos e Certificações<span class="required">*</span></label>
+                    <input type="text" id="curso" name="curso" required>
+                </div>
 
-<section>
-    <div class="form-change">
-        <button class= "button-btn" type="save" onclick="salvarFormulario()">Salvar</button>
-        <button class= "button-btn" type="change" onclick="alterarFormulario()">Alterar</button>
-        <button class= "button-btn" type="following" onclick="seguirFormulario()">Seguir</button>
+                <div class="form-group">
+                    <label for="instituicao">Instituição<span class="required">*</span></label>
+                    <input type="text" id="instituicao" name="instituicao" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-group">
+                        <input type="checkbox" name="iscurrent" id="iscurrent-curso">
+                        <span>Atualmente Cursando</span>
+                    </label>
+
+                </div>
+                
+                <div class="form-group date-group">
+                    <label for="mesInicioCurso">Mês de início:</label>
+                    <select name="mesInicioCurso" id="mesInicioCurso">
+                        <option value="">Mês</option>
+                        <option value="01">Janeiro</option>
+                        <option value="02">Fevereiro</option>
+                        <option value="03">Março</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Maio</option>
+                        <option value="06">Junho</option>
+                        <option value="07">Julho</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+        
+                    <label for="anoiniciocurso">Ano de início:</label>
+                    <select name="anoiniciocurso" id="anoiniciocurso">
+                        <option value="">Ano</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+        
+                <div class="form-group date-group">
+                    <label for="mesfimCurso">Mês de conclusão:</label>
+                    <select name="mesfimCurso" id="mesfimCurso">
+                        <option value="">Mês</option>
+                        <option value="01">Janeiro</option>
+                        <option value="02">Fevereiro</option>
+                        <option value="03">Março</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Maio</option>
+                        <option value="06">Junho</option>
+                        <option value="07">Julho</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+        
+                    <label for="anofimcurso">Ano de conclusão:</label>
+                    <select name="anofimcurso" id="anofimcurso">
+                        <option value="">Ano</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                
+
+                <div class="button-container">
+                    <button type="button" class="language-btn" id="remover-formacao">&#128465; Remover Formação</button>
+                    <button type="button" class="language-btn" id="adicionar-formacao">&#10000; Adicionar outra
+                        formação</button>
+                </div>
+            </fieldset>
+
+            <fieldset id="idiomas">
+                <legend>Idiomas</legend>
+                <div class="form-group">
+                    <label for="idioma">Idioma<span class="required">*</span></label>
+                    <input type="text" id="idioma" name="idioma" required>
+                </div>
+                <div class="form-group">
+                    <label for="nivel">Nível de Proficiência<span class="required">*</span></label>
+                    <select name="nivel" id="nivel" required>
+                        <option value="">Selecione</option>
+                        <option value="basico">Básico</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                        <option value="fluente">Fluente</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button type="button" class="language-btn" id="remover-idioma">&#128465; Remover Idioma</button>
+                    <button type="button" class="language-btn" id="adicionar-idioma">&#10000; Adicionar outro
+                        idioma</button>
+                </div>
+            </fieldset>
+
+            <fieldset id="viagens">
+                <legend>Intercâmbios e Viagens</legend>
+                <div class="form-group">
+                    <label for="pais">País<span class="required">*</span></label>
+                    <input type="text" id="pais" name="pais" required>
+                </div>
+
+                <div class="form-group date-group">
+                    <label for="anoInicioViagem">Ano:</label>
+                    <select name="anoInicioViagem" id="anoInicioViagem" required>
+                        <option value="">Ano</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option> 
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricaoViagem">Descrição</label>
+                    <textarea id="descricaoViagem" name="descricaoViagem"></textarea>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" class="language-btn" id="remover-viagem">&#128465; Remover Viagem</button>
+                    <button type="button" class="language-btn" id="adicionar-viagem">&#10000; Adicionar outra
+                        viagem</button>
+                </div>
+            </fieldset>
+
+            <fieldset id="contato">
+                <legend>Contatos</legend>
+                <div class="form-group">
+                    <label for="telefone">Telefone<span class="required">*</span></label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(11) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil">
+                </div>
+                <div class="form-group">
+                    <label for="github">GitHub</label>
+                    <input type="url" id="github" name="github" placeholder="https://github.com/seu-usuario">
+                </div>
+
+            </fieldset>
+
+            <div class="form-actions">
+            <button type="button" class="alterar-btn" id="alterar-sobre">&#10000; Alterar</button>
+             <button type="button" class="salvar-voltar-btn" id="salvar-voltar-btn">&#10004; Salvar e Voltar ao Painel</button>
+             <button type="button" class="salvar-portfolio-btn" id="salvar-portfolio-btn">&#10004; Salvar e Ir para o Portfólio</button>
+            </div>
+        </form>
     </div>
-</section>
-      
-<!-- Redes sociais -->
-<section>
+
+   <!-- Rede sociais -->
+   <section>
     <div style="text-align: right;" class="contact">
-        <h4 class="subtitulo"><strong>Nossas Redes Sociais</strong></h4>
+        <h4 class="subtitulo"><strong>Redes Sociais:</strong></h4>
     </div>
 </section>
 
 <section class="social">
     <div class="socialnetworks">
-        <a href="https://www.instagram.com" target="_blank"><img width="40" height="40" src="./image/Instagram.svg" alt="Instagram"></a>
-        <a href="https://www.linkedin.com" target="_blank"><img width="40" height="40" src="./image/LinkedIn.svg" alt="LinkedIn"></a>
-        <a href="https://www.facebook.com" target="_blank"><img width="40" height="40" src="./image/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="Twitter"></a>
-        <a href="https://www.youtube.com" target="_blank"><img width="40" height="40" src="./image/Youtube.svg" alt="YouTube"></a>
-    </div>
+           <a href="https://www.instagram.com" target="_blank"><img width="40" height="40" src="./image/Instagram.svg" alt="Instagram"></a>
+           <a href="https://www.linkedin.com" target="_blank"><img width="40" height="40" src="./image/LinkedIn.svg" alt="LinkedIn"></a>
+           <a href="https://www.facebook.com" target="_blank"><img width="40" height="40" src="./image/facebook.svg" alt="Facebook"></a>
+           <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="X"></a>
+           <a href="https://www.youtube.com" target="_blank"><img width="40" height="40" src="./image/Youtube.svg" alt="YouTube"></a>
+   </div>
 </section>
 
+<!-- Direitos reservados -->
 <footer>
-    <p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
+<p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
 </footer>
 
-<script src="./script/servico.js"></script>
-<script>
-    function salvarFormulario() {
-        // Lógica para salvar o formulário
-        alert("Formulário salvo!");
-        window.location.href = './portfolio.html';
-    }
 
-    function alterarFormulario() {
-        // Lógica para alterar o formulário
-        alert("Formulário alterado!");
-        window.location.href = './portfolio.html';
-    }
-
-    function seguirFormulario() {
-        // Lógica para seguir com o formulário
-        alert("Seguindo com o formulário!");
-        window.location.href = './portfolio.html';
-    }
-</script>
+    <script src="./script/formulario.js"></script>
 </body>
 </html>
-

@@ -59,8 +59,9 @@ nav a:hover {
     color: white;
 }
 
+/* Estilos para formulários */
 /* Container principal */
-.container {
+.form-container {
     width: 90%;
     max-width: 900px;
     margin: 2rem auto;
@@ -69,32 +70,36 @@ nav a:hover {
     justify-content: center;
 }
 
-/* Estilos para formulários */
 h2 {
-    color: rgb(231, 19, 19);
     text-align: center;
+    color: rgb(231, 19, 19);
     margin-bottom: 2rem;
 }
 
 fieldset {
-    margin: 20px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #00000041;
-
 }
 
 legend {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(231, 19, 19);
+    color: rgb(17, 153, 231);
     padding: 0 0.5rem;
     font-weight: bold;
 }
 
+/* Grupos de Inputs */
 .form-group {
     margin-bottom: 1rem;
+}
+
+.form-data,
+.form-pcd {
+    width: 25%;
+    text-align: center;
 }
 
 label {
@@ -104,10 +109,11 @@ label {
 }
 
 input[type="text"],
-input[type="number"],
-input[type="url"],
-select,
-textarea {
+input[type="sexo"],
+input[type="orientacao-sexual"],
+input[type="raca"],
+input[type="pcd"],
+select {
     width: 100%;
     padding: 0.5rem;
     border: 0.8px solid black;
@@ -117,28 +123,9 @@ textarea {
     box-sizing: border-box;
 }
 
-.upload-group {
-    margin-bottom: 1rem;
-}
-
-label.project {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    cursor: default;
-}
-
-input[type="file"] {
+input[type="date"] {
+    text-align: center;
     width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-input[type="email"],
-input[type="tel"] {
-    width: 50%;
-    margin: 5px;
     padding: 0.5rem;
     border: 0.8px solid black;
     border-radius: 10px;
@@ -147,100 +134,15 @@ input[type="tel"] {
     box-sizing: border-box;
 }
 
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/*idioma*/
-.language-container {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    margin: 10px;
-    width: 100%;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.button-container {
-    display: flex;
-    gap: 10px;
-}
-
-.language-btn {
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: 1px solid var(--primary-color);
-    box-shadow: 1px 1px 6px #00000041;
-    border-radius: 10px;
-}
-
-.language-btn:hover {
-    background-color: #0056b3;
-}
-
-
-/* Grupos de Inputs */
-.checkbox-group,
-.radio-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-
-}
-
-.checkbox-group input,
-.radio-group input {
-    margin-right: 0.5rem;
-}
-
-.date-group {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.date-group select {
-    width: 45%;
-}
-
-/* Botões de salvar, alterar e seguir*/
-.form-change {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.button-btn,
-.form-group button {
-    border: 2px solid var(--primary-color);
-    background-color: var(--accent-color);
-    color: var(--background-color);
-    padding: 0.75rem;
-    width: auto;
-    min-width: 100px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, opacity 0.3s;
-}
-
-#button-btn:hover {
-    opacity: 0.9;
-}
 
 /* Estilo específico para botões de ação */
-.form-actions {
+.submit-group {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.salvar-portfolio-btn,
-.salvar-voltar-btn,
-.alterar-btn {
+.button-btn {
     padding: 5px 10px;
     cursor: pointer;
     background-color: #007bff;
@@ -250,8 +152,9 @@ textarea {
     border-radius: 10px;
 }
 
-  /* Estilização de contatos */
-  .subtitulo {
+
+/* Estilização de contatos */
+.subtitulo {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
@@ -312,21 +215,26 @@ footer {
 
 }
 
-@media (max-width: 600px) {
-    .form-change {
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .submit-group {
         flex-direction: column;
         align-items: center;
     }
-
+ 
     button,
     .form-group button {
-        width: 100%;
-        max-width: 250px;
+        width: 50%;
+        max-width: 100px;
         margin-bottom: 10px;
     }
 }
 
-footer {
-    flex-direction: column;
-    margin: 10px;
+@media screen and (max-width: 480px) {
+    .figure img {
+        width: 200px;
+    }
 }

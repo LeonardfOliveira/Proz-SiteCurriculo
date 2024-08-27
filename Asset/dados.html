@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Dados Pessoais</title>
+    <link rel="stylesheet" href="./style/dados.css">
+</head>
+
+<body>
+    <header>
+        <div class="figure">
+            <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./dashboard.html"><strong>Painel</strong></a></li>
+                <li><a href="./dados.html"><strong>Dados Pessoais</strong></a></li>
+                <li><a href="./formulário.html"><strong>Editar e Criar</strong></a></li>
+                <li><a href="./portfolio.html"><strong>Portfólio</strong></a></li>
+                <li><a href="./configuracoes.html"><strong>Configurações</strong></a></li>
+                <li><a href="./alterarsenha.html"><strong>Alterar Senha</strong></a></li>
+                <li><a href="../index.html" id="exit-btn">Sair</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <fieldset>
+            <legend>
+                <h2>Dados Pessoais:</h2>
+            </legend>
+            <form id="dados-pessoais-form">
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(11) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado" required>
+                </div>
+                <div class="form-group">
+                    <label for="pais">País:</label>
+                    <input type="text" id="pais" name="pais" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="orientacao-sexual">Orientação Sexual:</label>
+                    <select id="orientacao-sexual" name="orientacao-sexual" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="heterossexual">Heterossexual</option>
+                        <option value="homossexual">Homossexual</option>
+                        <option value="bissexual">Bissexual</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="raca">Raça/Cor:</label>
+                    <select id="raca" name="raca" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="branca">Branca</option>
+                        <option value="preta">Preta</option>
+                        <option value="parda">Parda</option>
+                        <option value="amarela">Amarela</option>
+                        <option value="indigena">Indígena</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pcd">PCD (Pessoa com Deficiência):</label>
+                    <select id="pcd" name="pcd" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+                <div class="form-pcd" id="deficiencia-group" style="display: none;">
+                    <label for="tipo-deficiencia">Tipo de Deficiência:</label>
+                    <input type="text" id="tipo-deficiencia" name="tipo-deficiencia">
+                </div>
+                <div class="form-data">
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+                </div>
+
+                <div class="box">
+                    <input id="terms" type="checkbox" name="terms">
+                    <label for="terms">Li e concordo com os termos de serviços e nossa política de privacidade</label>
+                </div>
+
+                <div class="box">
+                    <input id="declaration" type="checkbox" name="declaration">
+                    <label for="declaration">Declaro que as informações aqui prestadas são verdadeiras e autênticas
+                        (fiéis à verdade e condizentes com a realidade dos fatos), para fins de direito, sob as penas da
+                        Lei, e assumo a inteira responsabilidade pelas mesmas.</label>
+                </div>
+
+                <div align="center" class="submit-group">
+                    <button class="button-btn" type="button" onclick="alterarFormulario()">&#10000; Alterar</button>
+                    <button class="button-btn" type="button" onclick="salvarFormulario()">&#10004; Salvar</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <section>
+        <div style="text-align: right;" class="contact">
+            <h4 class="subtitulo"><strong>Nossas Redes Sociais</strong></h4>
+        </div>
+    </section>
+
+    <div class="socialnetworks">
+        <a href="https://www.instagram.com" target="_blank"><img width="40" height="40" src="./image/Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img width="40" height="40" src="./image/LinkedIn.svg" alt="LinkedIn"></a>
+        <a href="https://www.facebook.com" target="_blank"><img width="40" height="40" src="./image/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img width="40" height="40" src="./image/X.svg" alt="X"></a>
+        <a href="https://www.youtube.com" target="_blank"><img width="40" height="40" src="./image/Youtube.svg" alt="YouTube"></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./script/dados.js"></script>
+</body>
+
+</html>

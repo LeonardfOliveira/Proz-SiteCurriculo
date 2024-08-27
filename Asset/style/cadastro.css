@@ -39,31 +39,31 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--accent-color);
+    color: black;
 }
 
 nav a:hover {
-    color: var(--primary-color);
+    color: black;
     transition: color 0.3s;
 }
 
 /* Estilo do botão de login */
-#login-btn {
-    background-color: var(--accent-color);
-    border: 1px solid var(--primary-color);
-    color: var(--background-color);
+#login-btn, #inscreva-btn {
+    background-color: rgb(17, 153, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(246, 247, 248);
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
-    text-align: center;
-    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px #00000041;
+    border-radius: 10px;
 }
 
-#login-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--background-color);
+#login-btn, #inscreva-btn:hover {
+    background-color: rgb(17, 153, 231);
+    color: white;
 }
-
 
 /* Formulário de Cadastro */
 main {
@@ -80,40 +80,7 @@ main {
 .image img {
     border-radius: 10px;
     width: 750px; 
-}
-
-/* Inscreva-se */
-#inscreva-btn {
-    background-color: var(--accent-color);
-    border: 1px solid var(--primary-color);
-    color: var(--background-color);
-    padding: 0.8rem 1.2rem;
-    margin: 1rem 0;
-    border-radius: 40px;
-    text-decoration: none;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#inscreva-btn:hover {
-    opacity: 0.9;
-}
-
-/* Login */
-#open-btn{
-    background-color: var(--accent-color);
-    border: 1px solid var(--primary-color);
-    color: var(--background-color);
-    padding: 0.8rem 1.2rem;
-    margin: 1rem 0;
-    border-radius: 40px;
-    text-decoration: none;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#open-btn:hover {
-    opacity: 0.9;
+    box-shadow: 2px 2px 12px #00000041;
 }
 
 /* Formulário */
@@ -128,12 +95,11 @@ main {
 
 .Title {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(17, 153, 231);
+    color: rgb(231, 19, 19);
     margin-bottom: 25px;
 }
 
 .input-subgroup1 {
-    
     margin-top: 10px;
     display: flex;
     gap: 120px;
@@ -143,10 +109,6 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -176,39 +138,7 @@ p {
     margin-bottom: 1.1rem;
 }
 
-/* Botão */
-button {
-    border: 2px solid var(--primary-color);
-    background-color: var(--accent-color);
-    color: var(--background-color);
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.75rem;
-    width: auto; 
-    min-width: 100px; 
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, opacity 0.3s;
-}
-
-#button:hover {
-    opacity: 0.9;
-}
-
-/* cadastro de login */
-.log-sociais {
-    text-align: center;
-}
-
-.log-sociais img {
-    margin: 0;
-    width: 60px;
-    height: 50px;
-    margin: 5px 0 5px 5px;
-    cursor:pointer;
-}
-
-/* Estilos de Contato */
+/* Estilização de contatos */
 .subtitulo {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -218,7 +148,18 @@ button {
     color: var(--text-color);
 }
 
-/* Rodapé */
+/* Estilização de Redes sociais */
+.socialnetworks {
+    display: flex;
+    color: var(--text-color);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: auto;
+}
+
+/* estilização de rodapé */
+
 footer {
     display: flex;
     justify-content: center;
@@ -227,12 +168,75 @@ footer {
     color: var(--text-color);
 }
 
-/* Redes sociais */
-.socialnetworks {
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 250px;
-    margin: auto;
+
+/* Responsividade */
+/* responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .register {
+        padding: 20px;
+        height: auto;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .input-subgroup1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    #login-btn, #inscreva-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .register {
+        padding: 15px;
+    }
+
+    .input-box input {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .box {
+        padding: 0.8rem;
+    }
 }

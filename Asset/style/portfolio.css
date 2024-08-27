@@ -1,0 +1,439 @@
+:root {
+    --primary-color: #0070c0;
+    --secondary-color: #e7f1f8;
+    --text-color: #000000;
+    --dark-text: #333333;
+}
+
+/* Estilo de página */
+body {
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    height: auto;
+}
+
+nav ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: rgb(17, 153, 231);
+    transition: 0.3s all;
+}
+
+/* estilização de botões de cadastro e login */
+#exit-btn {
+    background-color: rgb(17, 153, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid var(--primary-color);
+    color: rgb(246, 247, 248);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px #00000041;
+    border-radius: 10px;
+}
+
+#exit-btn:hover {
+    background-color: rgb(17, 153, 231);
+    color: white;
+}
+
+#exit-btn:hover {
+    background-color: #005b8d;
+    color: #ffffff;
+}
+
+/* Resumo */
+.profile {
+    margin: 100px auto 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.img-profile {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+    margin-right: 40px;
+    justify-content: center;
+}
+
+.profile-info h1 {
+    color: var(--text-color);
+    margin: 20px;
+    font-size: 30px;
+}
+
+.profile-info p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+/* Habilidades */
+.section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    flex: 1 1 200px;
+    border-radius: 20px;
+    padding: 0.5rem;
+    border: 0.8px solid var(--dark-text);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/* Portfólio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.portfolio-item {
+    display: flex;
+    justify-items: center;
+    margin: 20px;
+    text-align: center;
+    width: 500px;
+    height: 260px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+}
+
+/* Títulos de Vídeos */
+.title-video {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Contêiner de Vídeo */
+.video-play {
+    display: block;
+    border-radius: 40px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Experiências */
+.title-education,
+.title-idioma,
+.title-intercambio,
+.title-experience {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Imagem de Experiência */
+.image-experiencia {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+.figure-experience {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Conteúdo de Experiência */
+.conteudo-experiencia {
+    flex: 2 1 300px;
+    max-width: 100%;
+}
+
+.text-experience {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dark-text);
+}
+
+.title-education,
+.title-idioma,
+.title-viagem,
+.title-contato {
+    margin-bottom: 20px;
+}
+
+/* Estilo para a seção de Formações */
+.formacoes,
+.idioma,
+.viagem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.formacoes .education-text, .education-text, .title-viagem {
+    flex: 1 1 300px;
+    padding-right: 20px;
+}
+
+.formacoes .figure-education,
+.idioma .figure-idioma,
+.viagem-content .figure-viagem {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para a seção de Contatos */
+.container-contato {
+    padding: 20px;
+}
+
+.container-contato ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container-contato li {
+    margin-bottom: 10px;
+}
+
+/* Estilo Contatos */
+.subtitulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 30px auto;
+    color: var(--text-color);
+}
+
+.contactclasse, .contactinfo, footer {
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Redes Sociais */
+.socialnetworks {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #exit-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin: 0.25rem 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img, .profile-info {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .profile-info {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .profile-info h1 {
+        font-size: 28px;
+    }
+
+    .profile-info p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info h1 {
+        font-size: 24px;
+    }
+
+    .profile-info p {
+        font-size: 20px;
+    }
+
+    .video-play iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-content,
+    .formacoes,
+    .idioma,
+    .viagem {
+        flex-direction: column;
+    }
+
+    .image-experiencia,
+    .conteudo-experiencia,
+    .formacoes .education-text,
+    .education-text,
+    .title-viagem {
+        max-width: 100%;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        margin: 50px auto 20px;
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 18px;
+    }
+
+    .portfolio-item {
+        font-size: 18px;
+        height: 220px;
+    }
+}
+
+footer {
+    flex-direction: column;
+    margin: 10px;
+}

@@ -1,0 +1,162 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção de oportunidades */
+.oportunidade {
+    color: #007bff;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.oportunidade h1 {
+    margin: 0;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Container de busca */
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-container select,
+.search-container input,
+.search-container button {
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-container select,
+.search-container input {
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+.search-container button,
+button.candidatar-se {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    flex: 0 0 auto;
+}
+
+.search-container button:hover,
+button.candidatar-se:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+#clear-filters-btn {
+    background-color: #dc3545;
+}
+
+#clear-filters-btn:hover {
+    background-color: #c82333;
+    border-color: #a71d2a;
+}
+
+/* Lista de vagas */
+main {
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+#job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.job:hover {
+    background-color: #e1f5fe;
+}
+
+.job h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+}
+
+.job p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Popup */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .oportunidade h1 {
+        font-size: 24px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container select,
+    .search-container input,
+    .search-container button {
+        width: 100%;
+        max-width: none;
+    }
+
+    #job-listings {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+

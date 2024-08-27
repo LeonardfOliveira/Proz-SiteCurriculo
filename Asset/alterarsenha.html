@@ -3,52 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
-    <link rel="stylesheet" href="./style/login.css">
+    <title>Tela de Mudar a Senha</title>
+    <link rel="stylesheet" href="./style/alterarsenha.css">
+ 
 </head>
 <body>
 
- <!-- Menu de acesso -->    
+<!-- Menu de acesso -->
 <header>
     <div class="figure">
         <img src="./image/Logo 3.png" width="300" height="50" alt="Logo" />
     </div>
     <nav>
         <ul>
-            <li><a href="../index.html"><strong>Home</strong></a></li>
-            <li><a href="./Sobre.html"><strong>Quem somos</strong></a></li>
-            <li><a href="./Servico.html"><strong>Serviços</strong></a></li>
-            <li><a href="./Contatos.html"><strong>Fale Conosco</strong></a></li>
-            <li><a href="./login.html" id="loga-se-btn">Fazer login</a></li>
+            <li><a href="./dashboard.html"><strong>Painel</strong></a></li>
+            <li><a href="./dados.html"><strong>Dados Pessoais</strong></a></li>
+            <li><a href="./formulário.html"><strong>Editar e Criar</strong></a></li>
+            <li><a href="./portfolio.html"><strong>Portfólio</strong></a></li>
+            <li><a href="./configuracoes.html"><strong>Configurações</strong></a></li>
+            <li><a href="./alterarsenha.html"><strong>Alterar Senha</strong></a></li>
+            <li><a href="../index.html" id="exit-btn">Sair</a></li>
        </ul>
     </nav>
 </header>
 
-
- <!-- Menu de mudar a senha -->
+ <!-- Menu de login -->
 <section class="login-container">
     <div class="login-image">
-        <img src="./image/password.gif" alt="profissional">
+        <img src="./image/login.gif" alt="profissional">
     </div>
 
     <div class="login">
         <aside>
-            <h2>Login</h2>
-            <form class="login-password" id="login-form">
-                <input class="login-pass" type="text" id="login" placeholder="Login" required>
-                <input class="login-pass" type="password" id="password" placeholder="Senha" required>
-                <div class="input-box">
-                    <label classe="esqueci"><a href="./Senha.html"><strong>Esqueci a senha</strong></a></label>
-                </div>
+            <h2>Mudar a Senha</h2>
+            <form class="login-password" id="senha-form">
+                <label for="new-password"><strong>Nova Senha</strong></label>
+                <input class="login-pass" type="password" id="new-password" placeholder="Digite sua nova senha" required>
+                <label for="confirm-password"><strong>Confirmar a senha</strong></label>
+                <input class="login-pass" type="password" id="confirm-password" placeholder="Confirme sua nova senha" required>
                 <div style="text-align: right;" class="open">
-                    <button type="submit" id="open-btn"><strong>Entrar</strong></button>
+                    <button type="submit" id="open-btn"><strong>Alterar</strong></button>
                 </div>
             </form>                          
         </aside>
     </div>
 </section>
 
-    <!-- Rede sociais -->
+ <!-- Rede Sociais -->
 <section>
     <div style="text-align: right;" class="contact">
         <h4 class="subtitulo"><strong>Redes Sociais:</strong></h4>
@@ -69,9 +70,6 @@
 <footer>
     <p>&copy; 2024 ProzConnect. Todos os direitos reservados.</p>
 </footer>
-
-<!-- script -->
-<script src="./script/login.js"></script>
+<script src="./script/senha.js"></script>
 </body>
 </html>
-

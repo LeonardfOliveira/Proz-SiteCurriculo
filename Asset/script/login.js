@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const passwordInput = document.getElementById("password");
     const loginButton = document.getElementById("open-btn");
 
-   
+    // Preenche os campos com valores de exemplo
+    loginInput.value = 'usuario@example.com';
+    passwordInput.value = 'senhaExemplo123';
+
     form.addEventListener("submit", function(event) {
        
         event.preventDefault();
@@ -34,7 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (isValid) {
-            window.location.href = "portfolio.html";
+            // Exibe o popup de sucesso
+            alert('Login feito com sucesso!');
+            
+            // Redireciona para a página de dashboard após 1 segundo
+            setTimeout(() => {
+                window.location.href = "dashboard.html";
+            }, 1000);
         } else {
             loginButton.disabled = true; 
         }
@@ -48,4 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
         loginButton.disabled = false;
     });
 });
+
+
 
